@@ -1,0 +1,99 @@
+﻿*:focus {
+       outline: none;
+    }
+
+.titulos {
+    border-bottom: 1px solid #042352;
+    /*color: #33CA00;*/
+    color: #8F9094;
+    /*font-family: 'segoebold';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 26px;
+    /*font-weight: bold;*/
+    margin: 0;
+    padding-top: 100px;
+    margin-left: 10px;
+}
+
+.titulos_secundarios {
+    border-bottom: 1px solid #042352;
+    color: #042352;
+    font-family: 'segoeregular';
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 7px;
+    margin-left:10px;
+}
+
+#Div_Titulo {    
+    border-bottom:1px solid #0162A6;
+}
+
+
+.ConfirmacionContenedor {
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.ConfirmacionCabecera {
+    background-color: #F7F6F2;
+    border: 1px solid #5094C3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 95%;
+}
+
+#ContentPlaceHolder_lblRazonSocial {
+    float:left;
+}
+
+.titulos_confirmaciones {
+    color: #042352;
+    font-family: 'segoebold';
+    font-size: 20px;
+    /*font-weight: bold;*/
+    margin: 0 0 0 10px;
+}
+
+.ConfirmacionDatos {
+}
+
+.ConfirmacionCuerpo {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-right: 1px solid #5094C3;
+    border-left: 1px solid #5094C3;
+    border-bottom: 1px solid #5094C3;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+    width: 95%;
+    text-align:right;
+}
+
+footer {
+    background-color: #36B7C1;
+    bottom: 0;
+    height: 25px;
+    left: 0;
+    margin: 0 auto;
+    /*position: absolute;*/
+    right: 0;
+    width: 960px;
+}
+
+@media only screen and (max-device-width: 767px), 
+only screen and (max-device-height: 750px){
+/*@media screen and (max-width: 767px) {*/
+    .titulos {
+        margin-right:10px;
+    }
+}

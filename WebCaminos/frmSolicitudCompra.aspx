@@ -1,0 +1,325 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="frmSolicitudCompra.aspx.cs" Inherits="WebSISCON.frmSolicitudCompra" %>
+
+<%@ Register Src="~/Controles/MensajeAlertas.ascx" TagPrefix="ucMS" TagName="ucMS" %>
+
+
+<asp:Content ID="Header" ContentPlaceHolderID="head" runat="server">
+
+    <link href="assets/css/Teclado.css" rel="stylesheet" />
+    <script src="assets/js/Teclado.js"></script>
+    <script src="assets/js/jquery.numeric.js"></script>
+
+    <script type="text/javascript">
+
+
+        function pageLoad() {
+            cargar_random();
+            loadpage();
+            $("input.claseMonto").mask("999999999999999.99");
+
+            $("#<%= cmbProyecto.ClientID %>").change(function () {
+                bloqueo();
+            });
+
+
+        }
+    </script>
+</asp:Content>
+
+
+<asp:Content ID="Contenido" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <asp:UpdatePanel ID="updGeneral" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <h1 id="h1" runat="server" class="titulos">Solicitud de Materiales</h1>
+            <ucMS:ucMS runat="server" ID="ucAlertas" />
+            <asp:HiddenField ID="hfMensaje" runat="server" />
+
+            <asp:Panel ID="pnlRegistro" runat="server">
+
+                <div id="RegistroDatos" runat="server">
+                    <div id="panelDatosTransferencia" class="uk-margin-small">
+                        <div class="uk-margin-small">
+                            <div uk-grid class="uk-grid-small">
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label runat="server" CssClass="custom-dropdown">
+                                        <asp:Label ID="lblMoneda" CssClass="il_lb_campos uk-form-label texto_15" runat="server">Proyecto</asp:Label>
+                                        <asp:DropDownList ID="cmbProyecto" runat="server" CssClass="customSelect uk-select uk-form-small" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="cmbProyecto_SelectedIndexChanged">
+                                        </asp:DropDownList>
+                                    </asp:Label>
+                                </div>
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label ID="lblDesc" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Fecha Pedido</asp:Label>
+                                    <%--<asp:TextBox ID="txtNombreProyecto" runat="server" Visible="false"></asp:TextBox>--%>
+                                    <asp:TextBox ID="txtFechaPedido" runat="server" ReadOnly="true" CssClass="uk-input uk-form-small" MaxLength="100">
+                                    </asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div uk-grid class="uk-grid-small">
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label ID="Label1" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Cliente</asp:Label>
+                                    <asp:TextBox ID="txtCliente" runat="server" ReadOnly="true" CssClass="uk-input uk-form-small" MaxLength="100">
+                                    </asp:TextBox>
+                                </div>
+
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label ID="Label2" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Director de Obra</asp:Label>
+                                    <asp:TextBox ID="txtDirectorObra" runat="server" ReadOnly="true" CssClass="uk-input uk-form-small" MaxLength="100">
+                                    </asp:TextBox>
+                                </div>
+
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label ID="lblFiscal" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Fiscal de Obra</asp:Label>
+                                    <asp:TextBox ID="txtFiscalObra" runat="server" ReadOnly="true" CssClass="uk-input uk-form-small" MaxLength="100">
+                                    </asp:TextBox>
+                                </div>
+
+                            </div>
+                            <div uk-grid class="uk-grid-small">
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label ID="lblAlmacen" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Almacen</asp:Label>
+                                    <asp:TextBox ID="txtAlmacen" runat="server" ReadOnly="true" CssClass="uk-input uk-form-small" MaxLength="100">
+                                    </asp:TextBox>
+                                </div>
+                                <div class="uk-width-1-2 uk-width-1-3@m">
+                                    <asp:Label ID="Label12" runat="server" CssClass="uk-form-label texto_15">Fecha de Entrega</asp:Label>
+                                    <input id="txtFechaInicio1" type="date" runat="server" class="uk-input uk-form-small" />
+                                </div>
+                            </div>
+                            <div uk-grid class="uk-grid-small">
+                                <div class="uk-width-1-1 uk-width-1-1@m">
+                                    <asp:Label ID="Label6" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Observación</asp:Label>
+                                    <asp:TextBox ID="txtObservacion" runat="server" CssClass="uk-input uk-form-small" MaxLength="100">
+                                    </asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 id="h2" class="titulos_secundarios">Detalle de Materiales</h1>
+
+                <div class="uk-margin-small">
+                    <div uk-grid class="uk-grid-small">
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                            <asp:Label runat="server" CssClass="custom-dropdown">
+                                <asp:Label ID="Label3" CssClass="il_lb_campos uk-form-label texto_15" runat="server">Material</asp:Label>
+                                <asp:DropDownList ID="cmbMaterial" runat="server" CssClass="customSelect uk-select uk-form-small">
+                                </asp:DropDownList>
+                            </asp:Label>
+                        </div>
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                            <asp:Label runat="server" CssClass="custom-dropdown">
+                                <asp:Label ID="Label4" CssClass="il_lb_campos uk-form-label texto_15" runat="server">Unidad</asp:Label>
+                                <asp:DropDownList ID="cmbUnidad" runat="server" CssClass="customSelect uk-select uk-form-small">
+                                </asp:DropDownList>
+                            </asp:Label>
+                        </div>
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                            <asp:Label ID="Label5" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Cantidad</asp:Label>
+                            <asp:TextBox ID="txtCantidad" runat="server" CssClass="uk-input uk-form-small" MaxLength="100">
+                            </asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+                <div uk-grid class="uk-grid-small">
+                    <div class="uk-width-1-2 uk-width-1-3@m">
+                        <asp:Label runat="server" CssClass="custom-dropdown">
+                            <asp:Label ID="Label7" CssClass="il_lb_campos uk-form-label texto_15" runat="server">Actividad</asp:Label>
+                            <asp:DropDownList ID="cmbActividad" runat="server" CssClass="customSelect uk-select uk-form-small">
+                            </asp:DropDownList>
+                        </asp:Label>
+                    </div>
+                    <div class="uk-width-1-2 uk-width-1-3@m">
+                        <asp:Label ID="Label8" runat="server" CssClass="il_lb_campos uk-form-label texto_15">Precio Unitario</asp:Label>
+                        <asp:TextBox ID="txtPrecio" runat="server" CssClass="uk-input uk-form-small" MaxLength="100">
+                        </asp:TextBox>
+                    </div>
+                </div>
+
+                </div>
+                <div class="uk-margin-small">
+                    <div uk-grid class="uk-grid-small">
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                        </div>
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                            <asp:Button ID="btnEnviar" runat="server" Text="Agregar Detalle" CssClass="uk-button uk-button-primary uk-width-medium@s" OnClick="btnEnviar_Click" />
+                        </div>
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                        </div>
+                    </div>
+                </div>
+
+                <asp:HiddenField ID="hddID_Solicitud" runat="server" />
+
+                <div id="cuentas_origen">
+                    <ul uk-accordion>
+                        <li class="uk-open">
+                            <a class="uk-accordion-title uk-text-center" href="#">Detalle de Materiales</a>
+                            <div class="uk-accordion-content uk-margin-remove-top uk-overflow-auto">
+                                <table class="uk-table uk-table-divider uk-table-hover uk-table-middle uk-table-striped uk-table-small uk-table-responsive cuentasOrigen">
+                                    <asp:Repeater ID="rptDetallePago" runat="server" OnItemDataBound="rptDetallePago_ItemDataBound">
+                                        <HeaderTemplate>
+                                            <thead>
+                                                <tr class="trSubTitulo">
+                                                    <th>Item</th>
+                                                    <th>Unidad</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Material</th>
+                                                    <th>Precio Unitario</th>
+                                                    <th>Precio Parcial</th>
+                                                </tr>
+                                            </thead>
+                                        </HeaderTemplate>
+                                        <ItemTemplate>
+                                            <tr class="trSubTitulo_item uk-text-right uk-text-center@s">
+                                                <td data-label="Item" class="uk-text-center@s">
+                                                    <span class="Etiqueta">
+                                                        <asp:Label ID="lblCodigo" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Item") %>' />
+                                                    </span>
+                                                </td>
+                                                <td data-label="Material">
+                                                    <span class="Etiqueta">
+                                                        <asp:Label ID="Label9" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Material") %>' />
+                                                    </span>
+                                                </td>
+                                                <td data-label="Unidad" class="uk-text-left@s">
+                                                    <span class="Etiqueta">
+                                                        <asp:Label ID="lblNombres" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Unidad") %>' />
+                                                    </span>
+                                                </td>
+                                                <td data-label="Cantidad">
+                                                    <span class="Etiqueta">
+                                                        <asp:Label ID="lblCantidad" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Cantidad") %>' />
+                                                    </span>
+                                                </td>
+                                                <td data-label="Precio Unitario">
+                                                    <span class="Etiqueta">
+                                                        <asp:Label ID="Label10" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Precio_Unitario") %>' />
+                                                    </span>
+                                                </td>
+                                                <td data-label="Precio Parcial">
+                                                    <span class="Etiqueta">
+                                                        <asp:Label ID="Label11" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Precio_Parcial") %>' />
+                                                    </span>
+                                                </td>
+                                                <%-- <td data-label="Editar">
+                                                    <span class="Etiqueta">
+                                                        <asp:LinkButton ID="lnkEditar" runat="server" CssClass="link_saldo" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "ID_Personal") %>'
+                                                            OnCommand="lnkEditar_Command" Text="Editar">
+                                                        </asp:LinkButton>
+                                                    </span>
+                                                </td>--%>
+                                            </tr>
+                                        </ItemTemplate>
+                                        <FooterTemplate>
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="texto_15 uk-text-right" colspan="4">
+                                                        <asp:Label ID="lblEtiquetaCuota" runat="server" Font-Bold="true" Text="Total a Pagar: " />
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <asp:Label ID="lblTotalCuota" runat="server" />
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </FooterTemplate>
+                                    </asp:Repeater>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <%--<div id="Detalle_Materiales">
+                    <asp:Repeater ID="rptDetallePago2" runat="server">
+                        <HeaderTemplate>
+                            <table class="tbGrilla">
+                                <tr class="trTitulo">
+                                    <td class="titulo_grilla " colspan="6">Detalle de Materiales</td>
+                                </tr>
+                                <tr class="trSubTitulo">
+                                    <td>Item</td>
+                                    <td>Unidad</td>
+                                    <td>Cantidad</td>
+                                    <td>Material</td>
+                                    <td>Precio Unitario</td>
+                                    <td>Precio Parcial</td>
+                                </tr>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <tr class="trSubTitulo_item" style="background-color: #F7F6F2">
+                                <td style="text-align: left">
+                                    <asp:Label ID="lblItem" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Item")%>'></asp:Label>
+                                </td>
+                                <td style="text-align: left">
+                                    <asp:Label ID="lblDesc_Unidad" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Unidad")%>'></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblCantidad" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Cantidad")%>'></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblDes_Material" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Material")%>'></asp:Label>
+                                </td>
+                                <td style="text-align: right">
+                                    <asp:Label ID="lblPrecio_Unitario" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Precio_Unitario")%>'></asp:Label>
+                                    
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblPrecioParcial" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Precio_Parcial")%>'></asp:Label>
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                        <AlternatingItemTemplate>
+                            <tr class="trSubTitulo_item">
+                                <td style="text-align: left">
+
+                                    <asp:Label ID="lblItem" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Item")%>'></asp:Label>
+                                </td>
+                                <td style="text-align: left">
+                                    <asp:Label ID="lblDesc_Unidad" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Unidad")%>'></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblCantidad" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Cantidad")%>'></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblDes_Material" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Material")%>'></asp:Label>
+                                </td>
+                                <td style="text-align: right">
+                                    <asp:Label ID="lblPrecio_Unitario" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Precio_Unitario")%>'></asp:Label>                                    
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblPrecioParcial" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Precio_Parcial")%>'></asp:Label>
+                                </td>
+                            </tr>
+                        </AlternatingItemTemplate>
+                        <FooterTemplate>
+                            <tr class="trSubTitulo">
+                                <td class="titulo_grilla " style="text-align: right; border-top-left-radius: 0px; border-top-right-radius: 0px;" colspan="6">
+                                    <asp:Label ID="lblEtiquetaCuota" runat="server" Font-Bold="true" Text="Total Solicitud: "></asp:Label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="lblTotalCuota" runat="server"></asp:Label>
+                                </td>
+                            </tr>
+                            </table>
+                        </FooterTemplate>
+                    </asp:Repeater>
+                </div>--%>
+
+                <div class="uk-margin-small">
+                    <div uk-grid class="uk-grid-small">
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                        </div>
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                            <asp:Button ID="btnRegistrar" runat="server" Text="Registrar Solicitud" CssClass="uk-button uk-button-primary uk-width-medium@s" OnClick="btnRegistrar_Click" />
+                        </div>
+                        <div class="uk-width-1-2 uk-width-1-3@m">
+                        </div>
+                    </div>
+                </div>
+                <asp:HiddenField ID="hddGerenteArea" runat="server" />
+            </asp:Panel>
+        </ContentTemplate>
+        <Triggers>
+        </Triggers>
+    </asp:UpdatePanel>
+</asp:Content>

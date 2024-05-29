@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{6CA59B21-0AEE-4A5E-818A-F462F987A26D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaSiscon", "LogicaCaminos\LogicaSiscon.csproj", "{7A9DAB10-7532-4864-9880-494752FF3453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSISCON", "WebCaminos\WebSISCON.csproj", "{B2990075-C89E-455A-858C-85671A3E4942}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CA59B21-0AEE-4A5E-818A-F462F987A26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA59B21-0AEE-4A5E-818A-F462F987A26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA59B21-0AEE-4A5E-818A-F462F987A26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA59B21-0AEE-4A5E-818A-F462F987A26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9DAB10-7532-4864-9880-494752FF3453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9DAB10-7532-4864-9880-494752FF3453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9DAB10-7532-4864-9880-494752FF3453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9DAB10-7532-4864-9880-494752FF3453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2990075-C89E-455A-858C-85671A3E4942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2990075-C89E-455A-858C-85671A3E4942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2990075-C89E-455A-858C-85671A3E4942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2990075-C89E-455A-858C-85671A3E4942}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {309F3562-7337-472E-85C0-6842949C8365}
+	EndGlobalSection
+EndGlobal

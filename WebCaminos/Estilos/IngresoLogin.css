@@ -1,0 +1,406 @@
+﻿*:focus {
+    outline: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    margin: 0;
+}
+
+#il_header {
+    width: 960px;
+    background-image: url('../imagenes/banner.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+}
+
+#logo_fassil_escritorio {
+    background-image: url("../Slices/logo_fassil_escritorio.png");
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 72px;
+    margin: 34px 25px 25px;
+    width: 298px;
+}
+
+#logo_fassil_net {
+    background-image: url("../Slices/logo_fassil_net.png");
+    display: block;
+    float: right;
+    height: 75px;
+    margin: 25px;
+    width: 196px;
+}
+
+#il_contenedor {
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    /*background-color: #03224f;*/
+    padding-top: 4%; /*;border-top: 1px solid #fff;*/
+}
+
+#il_cabecera {
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 40px;
+    /*border-bottom: 1px solid #36B7C1;*/
+    border-bottom: 1px solid #8F9094;
+}
+
+#il_cabecera_trans {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 3%;
+    height: 40px;
+    border-bottom: 1px solid #042352;
+}
+
+#il_cabecera1 {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 6%;
+    height: 40px;
+    border-bottom: 1px solid #042352;
+}
+
+#il_ingreso_sistema {
+    font-family: 'segoebold';
+    font-size: 26px;
+    /*color: #36B7C1;*/
+    color: #8F9094;
+    float: left;
+    position: relative;
+    margin: 0;
+}
+
+#il_ingreso_sistema_trans {
+    font-family: 'segoebold';
+    font-size: 26px;
+    color: #042352;
+    float: left;
+    position: relative;
+    margin: 0;
+}
+
+#il_ingreso_sistema1 {
+    font-family: 'segoebold';
+    font-size: 26px;
+    color: #042352;
+    float: left;
+    position: relative;
+    margin: 0;
+}
+
+.il_zona_segura {
+    font-family: 'segoesemibold';
+    font-size: 16px;
+    color: #fff;
+    float: right;
+    position: relative;
+    margin: 1.5% 0 0;
+    background-image: url('../Slices/icon_zona_segura.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 25px;
+}
+
+#zona_segura_smart {
+    display: none;
+}
+
+#il_imagen_sz {
+    float: right;
+    position: relative;
+    margin-top: 2%;
+}
+
+#il_datos_usuario {
+    margin: 2% 31%;
+    height: auto;
+}
+
+#il_datos_usuarioAcceso {
+    height: auto;
+    margin: 4% 40% 4% 15%;
+}
+
+#il_datos_usuarioTransaccional {
+    margin: 4% 40% 4% 15%;
+    height: auto;
+}
+
+.il_lb_campos {
+    font-family: 'segoeregular';
+    font-weight: normal;
+    font-size: 15px;
+    /*color: white;*/
+    color: black;
+}
+
+.il_txt_campos {
+    width: 97%;
+    font-family: 'segoeregular';
+    font-size: 15px;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    border-radius: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #7A8EA6;
+    font-weight: normal;
+}
+
+.il_lb_error {
+    color: #ef4c31;
+    font-family: 'segoeregular';
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#imgCaptcha {
+    border: 1px solid #7A8EA6;
+    border-radius: 7px;
+    margin-bottom: 4%;
+    margin-top: 2%;
+    width: 290px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
+
+#imgActualizar {
+    cursor: pointer;
+    margin-bottom: 35px;
+    margin-left: 10px;
+}
+
+.il_botones {
+    font-family: 'segoeregular';
+    font-weight: normal;
+    color: white;
+    /*background-color: #33CA00;*/
+    background-color: #8F9094;
+    font-size: 15px;
+    border-radius: 7px;
+    width: 45%;
+    /*border: 1px solid #00a8a0;*/
+    border: 1px solid #8F9094;
+    padding: 3px;
+    cursor: pointer;
+}
+
+#btnCancelar {
+    float: right;
+}
+
+#btnCancelarTrans {
+    float: right;
+}
+
+#il_opciones {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    border-top: 1px solid #36B7C1;
+}
+
+#img_icon_verisign {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.il_botones_opciones {
+    font-family: 'segoeregular';
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid #042352;
+    padding: 3px;
+    padding-left: 45px;
+    cursor: pointer;
+    margin: 10px;
+    width: 250px;
+    text-align: left;
+}
+
+#il_botones_opciones {
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#btnManual {
+    background-image: url("../Imagenes/icon_manual.png");
+    background-repeat: no-repeat;
+    background-color: #042352;
+    background-position: 20px;
+}
+
+#btnConsejos {
+    background-image: url("../Imagenes/icon_consejos_seguridad.png");
+    background-repeat: no-repeat;
+    background-color: #36b7c1;
+    background-position: 20px;
+}
+
+#btnActivacion {
+    background-image: url("../Imagenes/icon_activacion.png");
+    background-repeat: no-repeat;
+    background-color: #042352;
+    background-position: 20px;
+}
+
+#btnPreguntas {
+    background-image: url("../Imagenes/icon_preguntas_frecuentes.png");
+    background-repeat: no-repeat;
+    background-color: #042352;
+    background-position: 20px;
+}
+
+.lblInfoClaveAcceso {
+    color: #042352;
+    font-family: 'segoebold';
+    font-size: 15px;
+    margin: 1% auto;
+    text-align: left;
+    width: 90%;
+}
+
+#lblInfo {
+    color: white;
+    font-family: 'segoeregular';
+    font-size: 15px;
+    font-weight: normal;
+    margin: 1% auto 0;
+    text-align: left;
+    width: 90%;
+    text-align: center;
+}
+
+#lblInfoAcc {
+    color: white;
+    font-family: 'segoeregular';
+    font-size: 15px;
+    font-weight: normal;
+    margin: 1% auto 0;
+    text-align: left;
+    width: 90%;
+    text-align: center;
+}
+
+#lblInfo1 {
+    color: white;
+    font-family: 'segoebold';
+    font-size: 15px;
+    margin: 1% auto;
+    text-align: left;
+    width: 90%;
+    margin-top: 5%;
+}
+
+#lblInfo2 {
+    font-family: 'segoebold';
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+#il_mensaje_out {
+    border-radius: 7px;
+    border: 1px solid white;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#mensajeOutTitulo {
+    color: white;
+    font-family: 'segoeregular';
+    font-size: 22px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#mensajeOut {
+    color: white;
+    font-family: 'segoeregular';
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#mensajeOut2 {
+    color: white;
+    font-family: 'segoeregular';
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#FooterPC {
+    background-color: #36B7C1;
+    color: #042352;
+    font-family: 'segoeregular';
+    font-size: 8pt;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center;
+    width: 960px;
+    font-weight: normal;
+}
+
+#FooterGeneral {
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+#Footer {
+    text-align: center;
+    font-family: 'segoeregular';
+    color: #042352;
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+#il_contenedorConsejo {
+    background-color: #fff;
+    border-top: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.il_lb_camposConsejo {
+    color: #042352;
+    font-family: "segoeregular";
+    font-size: 15px;
+    font-weight: normal;
+}
+
+body {
+    /*background-color: #00183e;*/
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

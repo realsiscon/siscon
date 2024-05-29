@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPopUp.master.cs" Inherits="FassilNetWeb.MasterPopUp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title></title>
+    <link href="Estilos/PrincipalMaster.css" rel="stylesheet" />
+    <link href="Estilos/Fuentes.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="POPUP_cabecera">
+            <%--<div id="logo_fassil_escritorio" onclick=""></div>
+            <div id="logo_fassil_net">
+                <div id="opciones_header">           
+                </div>
+            </div>  --%>
+            <%--<div id="encabezado_smart">
+                <div style="height:50px; padding-top:5px;">
+                    <h2 class="texto_bienvenida">Bienvenido:&nbsp;</h2>
+                    <h2 id="sCliente" runat="server"></h2><br />
+                    <h2 class="texto_bienvenida">Representante:&nbsp;</h2>
+                    <h2 id="sRepresentante" runat="server"></h2><br />
+                </div>           
+            </div> --%>
+        </div>
+        <div id="POPUP_segunda_cabecera_1">
+            <%--<div id="NombresUsuarios"><h2 class="texto_bienvenida">Bienvenido:&nbsp;</h2>
+                <h2 id="hClientePOPUP" runat="server" style="float:none"></h2>
+                <h2 class="texto_bienvenida">Representante:&nbsp;</h2>
+                <h2 id="hRepresentante" runat="server"></h2></div>--%>
+        </div>
+        <div class="POPUP_cuerpo_holder">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

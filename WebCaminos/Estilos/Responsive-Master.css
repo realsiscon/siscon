@@ -1,0 +1,509 @@
+﻿
+
+*:focus {
+       outline: none;
+    }
+ #Footer {
+        display:none;
+    }
+/*TABLET*/
+@media screen and (max-device-width: 959px) and (min-device-width: 768px){
+/*@media screen and (max-width: 959px) and (min-width: 768px) {*/
+
+body {
+    margin: 0;
+}
+    #cabecera {
+        width:768px;
+        background-image:url('../Slices/head_tablet2.png');
+    }
+
+    #contenedor {
+        width: 768px;
+    }
+
+    #logo_fassil_escritorio {
+        display: block;
+        float:left;
+        background-image:url('../Slices/logo_fassil_tablet.png');
+        height: 50px;
+        margin: 25px 10px;
+        width: 209px;
+    }
+
+    #logo_fassil_net {
+        background-image: url("../Slices/logo_fassil_net_tablet.png");
+        background-repeat: no-repeat;
+        display: block;
+        float: right;
+        height: 68px;
+        margin: 10px 25px 0;
+        width: 167px;
+    }
+
+    #segunda_cabecera {
+        padding-bottom:2px;
+        position: absolute;
+        top: 95px;
+        width: 768px;
+        margin:0;
+    }
+
+    #segunda_cabecera_1 {
+        float: left;
+        margin-right: 0;
+        padding-top: 5px;
+        width: 768px;
+    }
+
+    #segunda_cabecera h2 {
+        color:#042352;
+    }
+
+    .texto_bienvenida {
+        margin-left: 20px;
+    }
+    
+    #fecha_hora {
+        color: #042352;
+        float: left;
+        font-family: 'segoeregular';
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0 0 0 20px;
+        text-align: left;
+        width: 90%;
+    }
+
+    .cuerpo_holder {
+        height: auto;
+        width: 768px;
+        margin-left:0;
+    }
+
+    #NombresUsuarios {
+        display:none;
+    }
+
+    #notificaciones {
+        display:none;
+    }
+
+        #bienvenida_usuario h2 {
+            height: auto;
+            width: auto;
+            float:left;
+            padding-top:0;
+        }
+
+    #menu_tablet {
+        display: block;
+        height: 40px;
+        border-bottom: 1px solid #CFCFD1;
+        padding-bottom: 5px;
+    }
+
+    #navegador {
+        display:none;
+        padding-left:0;
+        
+        margin-top:-36px;
+    }
+
+    #tCliente {
+        color: #042352;
+        font-family: 'segoebold';
+        font-size: 14px;
+        /*font-weight: bold;*/
+        margin: 0;
+        float:left;
+    }
+
+    #tRepresentante {
+        color: #042352;
+        font-family: 'segoebold';
+        font-size: 14px;
+        /*font-weight: bold;*/
+        margin: 0;
+        float:left;
+    }
+
+    #ic_menu_tablet {
+        cursor: pointer;
+        float: left;
+        padding: 15px 15px 8px;
+        margin-bottom:0;
+        vertical-align:initial;
+        border-right:1px solid #CFCFD1;
+    }
+
+    #icNotTablet {
+        cursor: pointer;
+        float: left;
+        padding: 3px 10px 8px 15px;
+        border-right:1px solid #CFCFD1;
+        margin-bottom:0;
+        vertical-align:initial;
+    }
+
+        #opciones_header {
+            margin-top: 65px;
+        }
+
+    #ul_notificaciones_tablet {
+        height: 100%;
+        list-style: none outside none;
+        margin: 0;
+        overflow:auto;
+        padding-left: 0;
+    }
+
+    #ul_notificaciones_tablet li a {
+        background-position: right 5px center;
+        background-repeat: no-repeat;
+        color: #36B7C1;
+        float: left;
+        font-family: 'segoeregular';
+        font-size: 12px;
+        font-weight: normal;
+        height: auto;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        vertical-align: middle;
+        width: 160px;
+    }
+
+    #ul_notificaciones_tablet li a:hover {
+        color: #36B7C1;
+    }
+
+    #ul_notificaciones_tablet li {
+        border-bottom: 1px solid #CFCFD1;
+        height: 35px;
+        width: auto;
+    }
+
+    #ul_notificaciones_tablet li:last-child {
+        border-bottom: none;
+    }
+
+    #nro_notificaciones_tablet {
+        color: #FFFFFF;
+        font-family: 'segoeregular';
+        font-size: 11px;
+        margin: 0;
+        padding-left: 89px;
+        padding-top: 5px;
+        position: absolute;
+        width: 15px;
+        font-weight: normal;
+    }
+
+    .bubble_tablet
+    {
+        background: none repeat scroll 0 0 #EDEDED;
+        border-radius: 10px;
+        border:1px solid #CFCFD1;
+        height: auto;
+        padding: 0;
+        position: absolute;
+        /*top: 19%;*/
+        width: 200px;
+        z-index: 1;
+    }
+
+    .bubble_tablet:after 
+    {
+    content: "";
+    position: absolute;
+    /*top: 81px;*/
+    left: -8px;
+    border-style: solid;
+    border-width: 9px 8px 9px 0;
+    /*border-color: transparent #ededed;*/
+    border-color: transparent #ededed;
+    display: block;
+    width: 0;
+    z-index: 1;
+    }
+
+    #PIPE {
+        visibility:visible;
+    }
+    #FooterPC {
+        display:none;
+    }
+     #Footer {
+        display:inline-block;
+        background-color: #36b7c1;
+        color: white;
+        width: 768px;
+    }
+   
+}
+
+
+/*SMARTPHONE*/
+@media only screen and (max-device-width: 767px), 
+only screen and (max-device-height: 750px){
+/*@media screen and (max-width: 767px) {*/
+   #cabecera {
+        width:320px;
+        background-image:url('../Imagenes/cabecera_smartphone.png');
+        height:291px;
+    }
+
+    #contenedor {
+        width: 320px;
+    }
+
+    #logo_fassil_escritorio {
+        background-image: url("../Slices/icon_menu_smart.png");
+        display: block;
+        float: left;
+        height: 36px;
+        cursor: pointer;
+        margin: 20px 25px 0;
+        width: 36px;
+    }
+
+    #logo_fassil_net {
+        background-image: url("../Slices/logo_fassil_net_tablet.png");
+        background-repeat: no-repeat;
+        display: block;
+        float: right;
+        height: 68px;
+        margin: 10px 10px 0;
+        width: 167px;
+    } 
+
+    #encabezado_smart {
+        display: block;
+        height: 165px;
+        padding-left: 15px;
+        padding-right: 5px;
+        padding-top: 75px;
+    }
+
+    .texto_bienvenida {
+        /*color: #ffffff;*/
+        color:gray;
+        font-family: 'segoeregular';
+        font-size: 12px;
+        font-weight: normal;
+        float:left;
+    }
+
+    #sCliente {
+        color: #FFFFFF;
+        font-family: 'segoebold';
+        font-size: 12px;
+        margin: 0;
+        /*font-weight:bold;*/
+        float:left;
+    }
+
+    #sRepresentante {
+        color: #FFFFFF;
+        font-family: 'segoebold';
+        font-size: 12px;
+        margin: 0;
+        /*font-weight:bold;*/
+        float:left;
+    }
+
+    #tasa_compra_smart {
+        color: #FFFFFF;
+        font-family: 'segoeregular';
+        font-size: 14px;
+        margin: 0;
+        font-weight:normal;
+        text-align: center;
+        /*padding-top: 12px;*/
+    }
+
+    #fecha_hora_smart {
+        color: #FFFFFF;
+        font-family: 'segoeregular';
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0 0 40px;
+        text-align: center;
+    }
+
+    #segunda_cabecera {
+        display:none;
+    }
+    #segunda_cabecera_1 {
+        display:none;
+    }
+
+    #notiSmart {
+        cursor: pointer;
+        float: left;
+        margin-bottom: 0;
+        padding: 0 10px;
+        vertical-align: initial;
+    }
+
+    #zs_smart {
+        background-image: url("../Slices/icon_zona_segura_smart.png");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+        float: left;
+        font-family: 'segoeregular';
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0;
+        padding-left: 35px;
+        padding-right: 25px;
+        padding-top: 12px;
+    }
+
+    .iconos_cabecera_smart {
+        float:left;
+        padding-left:50px;
+        padding-top:10px;
+    }
+
+    #salir_smart {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-family: 'segoeregular';
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0;
+        padding-left: 45px;
+        padding-top: 12px;
+        text-decoration: none;
+    }
+
+    #mensaje_smart {
+        display:block;
+        border-bottom:1px solid #CFCFD1; 
+    }
+
+    #sc1_mensaje_smart {
+        text-align:center; 
+        color: #36B7C1;
+        font-size: 15px;
+        font-weight: normal;
+        margin:0;
+        font-family: 'segoeregular';
+    }
+
+    #navegador {
+        display:none;
+    }
+
+    
+    .cuerpo_holder {
+        height: auto;
+        margin-left: 0px;
+        width: 320px;
+    }
+
+    #opciones_header {
+      display:none;
+    }
+
+
+     #ul_notificaciones_smart {
+        height: 100%;
+        list-style: none outside none;
+        margin: 0;
+        overflow:auto;
+        padding-left: 0;
+    }
+
+    #ul_notificaciones_smart li a {
+        background-position: right 5px center;
+        background-repeat: no-repeat;
+        color: #36B7C1;
+        float: left;
+        font-family: 'segoeregular';
+        font-size: 12px;
+        font-weight: normal;
+        height: auto;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        vertical-align: middle;
+        width: 160px;
+    }
+
+    #ul_notificaciones_smart li a:hover {
+        color: #36B7C1;
+    }
+
+    #ul_notificaciones_smart li {
+        border-bottom: 1px solid #CFCFD1;
+        height: 35px;
+        width: auto;
+    }
+
+    #ul_notificaciones_smart li:last-child {
+        border-bottom: none;
+    }
+
+    #nro_notificaciones_smart {
+        color: #FFFFFF;
+        font-family: 'segoeregular';
+        font-size: 11px;
+        margin: 0px 0 0;
+        padding-left: 31px;
+        padding-top: 0;
+        position: absolute;
+        width: 15px;
+        font-weight: normal;
+    }
+
+    .bubble_smart
+    {
+        background: none repeat scroll 0 0 #EDEDED;
+        border-radius: 10px;
+        border:1px solid #CFCFD1;
+        height: auto;
+        padding: 0;
+        position: absolute;
+        width: 200px;
+        z-index: 1;
+    }
+
+    .bubble_smart:after 
+    {
+    content: "";
+    position: absolute;
+    left: -8px;
+    border-style: solid;
+    border-width: 9px 8px 9px 0;
+    border-color: transparent #ededed;
+    display: block;
+    width: 0;
+    z-index: 1;
+    }
+
+    #li1 :after 
+    {
+    border-color: #FFFFFF rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 0 15px 17px;
+    content: "";
+    display: block;
+    left: 27px;
+    position: absolute;
+    top: -15px;
+    width: 0;
+    z-index: 1;
+    }
+     #FooterPC {
+        display:none;
+    }
+      #Footer {
+        display:inline-block;
+        background-color: #36b7c1;
+        color: white;
+        width:320px;
+    }     
+}

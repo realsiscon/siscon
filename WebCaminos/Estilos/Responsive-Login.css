@@ -1,0 +1,234 @@
+﻿*:focus {
+    outline: none;
+}
+
+@media screen and (max-device-width:959px) and (min-device-width:768px) /*@media screen and (max-width:959px) and (min-width:768px)*/ {
+    #il_header {
+        width: 768px;
+        background-image: url('../Slices/head_tablet3.png');
+    }
+
+    #il_contenedor {
+        width: 768px;
+    }
+
+    #il_contenedorConsejo {
+        width: 768px;
+        margin-top: -3%;
+    }
+
+    #il_cabecera {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #il_cabecera_trans {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #il_datos_usuario {
+        margin: 2% 27%;
+    }
+
+    #imgCaptcha {
+        width: 250px;
+    }
+
+    #imgActualizar {
+        margin-bottom: 35px;
+    }
+
+    #il_opciones {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #l_teclado_virtual {
+        display: none;
+    }
+
+    #keyboard {
+        display: none;
+    }
+
+    #il_datos_usuarioAcceso {
+        margin: 4% 25% 4% 15%;
+    }
+
+    #FooterPC {
+        width: 768px;
+    }
+}
+
+@media only screen and (max-device-width:767px), only screen and (max-device-height:750px) /*@media only screen and (max-width:767px),
+only screen and (max-height:750px)*/ {
+    #il_header {
+        height: 72px;
+        width: 320px;
+        background-image: url('../Slices/iphne_v2.png');
+    }
+
+    #logo_fassil_escritorio {
+        background-image: url("../Slices/logo_fassil_smart.png");
+        background-position: 0 10px;
+        background-repeat: no-repeat;
+        float: none;
+        height: 62px;
+        margin: 0 auto;
+        width: 203px;
+    }
+
+    #il_mensaje_out {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #logo_fassil_net {
+        display: none;
+    }
+
+    #il_contenedor {
+        width: 320px;
+        padding-bottom: 1%;
+    }
+
+    #il_contenedorConsejo {
+        width: 320px;
+    }
+
+    #il_cabecera {
+        margin-left: 4%;
+        margin-right: 4%;
+        height: 35px;
+    }
+
+    #il_ingreso_sistema {
+        font-size: 21px;
+        width: 100%;
+    }
+
+    #il_cabecera_trans {
+        margin-left: 4%;
+        margin-right: 4%;
+        height: 65px;
+    }
+
+    #il_ingreso_sistema_trans {
+        font-size: 21px;
+        width: 100%;
+    }
+
+    #zona_segura_normal {
+        display: none;
+    }
+
+    #zona_segura_smart {
+        display: initial;
+        float: left;
+        font-size: 15px;
+        margin-top: 10px;
+        padding-right: 45px;
+    }
+
+    #il_datos_usuario {
+        margin: 12% 4% 10%;
+    }
+
+    .il_lb_campos {
+        font-size: 14px; 
+        /*color: black;*/       
+    }
+
+    #imgCaptcha {
+        width: 230px;
+    }
+
+    #imgActualizar {
+        margin-bottom: 30px;
+    }
+
+    #il_opciones {
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 15%;
+    }
+
+    .il_botones {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .il_txt_campos {
+    }
+
+    #il_botones_opciones {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #btnManual {
+        width: 100%;
+        margin: 10px 0;
+        background-position: 50px center;
+        padding: 3px 3px 3px 80px;
+    }
+
+    #btnConsejos {
+        width: 100%;
+        margin: 10px 0;
+        background-position: 50px center;
+        padding: 3px 3px 3px 80px;
+    }
+
+    #btnActivacion {
+        width: 100%;
+        margin: 10px 0;
+        background-position: 50px center;
+        padding: 3px 3px 3px 80px;
+    }
+
+    #btnPreguntas {
+        width: 100%;
+        margin: 10px 0;
+        background-position: 50px center;
+        padding: 3px 3px 3px 80px;
+    }
+
+    #l_teclado_virtual {
+        display: none;
+    }
+
+    #keyboard {
+        display: none;
+    }
+
+    .l_botones {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #l_datos_usuario {
+        height: 200px;
+        margin: 20% 4% 10%;
+    }
+
+    #il_datos_usuarioAcceso {
+        height: auto;
+        margin: 4% 5%;
+    }
+
+    #il_datos_usuarioTransaccional {
+        height: auto;
+        margin: 4% 5%;
+    }
+
+    #txtUsuario {
+        margin-bottom: 4%;
+    }
+
+    #FooterPC {
+        width: 320px;
+    }
+}

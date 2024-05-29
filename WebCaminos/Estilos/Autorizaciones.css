@@ -1,0 +1,285 @@
+﻿        #traspasos_pendientes_smart {
+            display:none;
+        }
+
+        #Transferencia_pendientes_smart {
+            display:none;
+        }
+
+        #ACH_pendientes_smart {
+            display:none;
+        }
+
+        #Solicitud_pendientes_smart {
+            display:none;
+        }
+
+        #HabilitacionCheq_pendientes_smart {
+            display:none;
+        }
+
+        #Prestamo_pendientes_smart {
+            display:none;
+        }
+
+        #Institucion_pendiente_smart {
+            display:none;
+        }
+
+        #Planilla_pendientes_smart {
+            display:none;
+        }
+
+        #PagoServicios_pendientes_smart {
+            display:none;
+        }
+
+        #TarjetasCredito_pendientes_smart {
+            display:none;
+        }
+
+        #RuatVehiculo_Pendientes_smart {
+            display:none;
+        }
+
+        #RuatInmueble_Pendientes_smart {
+            display:none;
+        }
+
+        #ContentPlaceHolder_btnPagarAutorizacionSmart {
+            display:none;
+        }
+
+/*@media screen and (max-width: 767px) {*/
+@media only screen and (max-device-width: 767px), 
+only screen and (max-device-height: 750px){
+
+    #ContentPlaceHolder_btnPagarAutorizacion {
+        display:none;
+    }
+
+    #ContentPlaceHolder_btnPagarAutorizacionSmart {
+            display:block;
+        }
+
+            #traspasos_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #traspasos_pendientes {
+                display:none;
+            }
+
+            #Transferencia_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #Transferencia_pendientes {
+                display:none;
+            }
+
+            #ACH_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #ACH_pendientes {
+                display:none;
+            }
+
+            #Solicitud_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #Solicitud_pendientes {
+                display:none;
+            }
+
+            #HabilitacionCheq_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #HabilitacionCheq_pendientes {
+                display:none;
+            }
+
+            #Prestamo_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #Prestamo_pendientes {
+                display:none;
+            }
+
+            #Institucion_pendiente_smart {
+                display:block;
+                margin-top:0;
+            }
+            #Institucion_pendientes {
+                display:none;
+            }
+
+            #Planilla_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #Planilla_pendientes {
+                display:none;
+            }
+
+            #PagoServicios_pendientes_smart {
+                display:block;
+                margin-top:0;
+            }
+            #PagoServicios_pendientes {
+                display:none;
+            }
+
+            #TarjetasCredito_pendientes_smart {
+                display:block;
+            }
+            #TarjetasCredito_pendientes {
+                display:none;
+            }
+
+            #RuatVehiculo_Pendientes_smart {
+                display:block;
+            }
+            #RuatVehiculo_Pendientes {
+                display:none;
+            }
+
+            #RuatInmueble_Pendientes_smart {
+                display:block;
+            }
+            #RuatInmueble_Pendientes {
+                display:none;
+            }
+
+    #GrillaTraspasoPendiente {
+        display:none;
+    }
+    #GrillaTransferenciaPendiente {
+        display:none;
+    }
+    #GrillaACHPendiente {
+        display:none;
+    }
+    #GrillaSolicitudPendiente {
+        display:none;
+    }
+    #GrillaHabilitacionPendiente {
+        display:none;
+    }
+    #GrillaPrestamoPendiente {
+        display:none;
+    }
+    #GrillaInstitucionesPendiente {
+        display:none;
+    }
+    #GrillaPlanillasPendiente {
+        display:none;
+    }
+    #GrillaServiciosPendiente {
+        display:none;
+    }
+
+    #GrillaTarjetaCreditoPendiente{
+        display:none;
+    }
+
+    #GrillaVehiculosPendiente{
+        display:none;
+    }
+
+    #GrillaInmueblesPendiente{
+        display:none;
+    }
+
+    #ContentPlaceHolder_TituloTraspasoPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloTransferenciaPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloACHPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloSolicitudPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloHabilitacionPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloPrestamoPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloInstitucionesPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloPlanillasPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloServiciosPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+    #ContentPlaceHolder_TituloTarjetaCreditoPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+
+    #ContentPlaceHolder_TituloVehiculosPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+
+    #ContentPlaceHolder_TituloInmueblesPendiente {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+    }
+
+}

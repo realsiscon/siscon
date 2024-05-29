@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2990075-C89E-455A-858C-85671A3E4942}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSISCON</RootNamespace>
+    <AssemblyName>WebSISCON</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1586.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\dataTables.uikit.css" />
+    <Content Include="assets\css\fuentes.min.css" />
+    <Content Include="assets\css\metismenujs.css" />
+    <Content Include="assets\css\select2.css" />
+    <Content Include="assets\css\select2.min.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\Teclado.css" />
+    <Content Include="assets\css\uikit.css" />
+    <Content Include="assets\css\uikit.theme.css" />
+    <Content Include="assets\favicon.png" />
+    <Content Include="assets\img\img404.png" />
+    <Content Include="assets\js\datatables.min.js" />
+    <Content Include="assets\js\dataTables.uikit.js" />
+    <Content Include="assets\js\i18n\af.js" />
+    <Content Include="assets\js\i18n\ar.js" />
+    <Content Include="assets\js\i18n\az.js" />
+    <Content Include="assets\js\i18n\bg.js" />
+    <Content Include="assets\js\i18n\bn.js" />
+    <Content Include="assets\js\i18n\bs.js" />
+    <Content Include="assets\js\i18n\ca.js" />
+    <Content Include="assets\js\i18n\cs.js" />
+    <Content Include="assets\js\i18n\da.js" />
+    <Content Include="assets\js\i18n\de.js" />
+    <Content Include="assets\js\i18n\dsb.js" />
+    <Content Include="assets\js\i18n\el.js" />
+    <Content Include="assets\js\i18n\en.js" />
+    <Content Include="assets\js\i18n\es.js" />
+    <Content Include="assets\js\i18n\et.js" />
+    <Content Include="assets\js\i18n\eu.js" />
+    <Content Include="assets\js\i18n\fa.js" />
+    <Content Include="assets\js\i18n\fi.js" />
+    <Content Include="assets\js\i18n\fr.js" />
+    <Content Include="assets\js\i18n\gl.js" />
+    <Content Include="assets\js\i18n\he.js" />
+    <Content Include="assets\js\i18n\hi.js" />
+    <Content Include="assets\js\i18n\hr.js" />
+    <Content Include="assets\js\i18n\hsb.js" />
+    <Content Include="assets\js\i18n\hu.js" />
+    <Content Include="assets\js\i18n\hy.js" />
+    <Content Include="assets\js\i18n\id.js" />
+    <Content Include="assets\js\i18n\is.js" />
+    <Content Include="assets\js\i18n\it.js" />
+    <Content Include="assets\js\i18n\ja.js" />
+    <Content Include="assets\js\i18n\ka.js" />
+    <Content Include="assets\js\i18n\km.js" />
+    <Content Include="assets\js\i18n\ko.js" />
+    <Content Include="assets\js\i18n\lt.js" />
+    <Content Include="assets\js\i18n\lv.js" />
+    <Content Include="assets\js\i18n\mk.js" />
+    <Content Include="assets\js\i18n\ms.js" />
+    <Content Include="assets\js\i18n\nb.js" />
+    <Content Include="assets\js\i18n\ne.js" />
+    <Content Include="assets\js\i18n\nl.js" />
+    <Content Include="assets\js\i18n\pl.js" />
+    <Content Include="assets\js\i18n\ps.js" />
+    <Content Include="assets\js\i18n\pt-BR.js" />
+    <Content Include="assets\js\i18n\pt.js" />
+    <Content Include="assets\js\i18n\ro.js" />
+    <Content Include="assets\js\i18n\ru.js" />
+    <Content Include="assets\js\i18n\sk.js" />
+    <Content Include="assets\js\i18n\sl.js" />
+    <Content Include="assets\js\i18n\sq.js" />
+    <Content Include="assets\js\i18n\sr-Cyrl.js" />
+    <Content Include="assets\js\i18n\sr.js" />
+    <Content Include="assets\js\i18n\sv.js" />
+    <Content Include="assets\js\i18n\th.js" />
+    <Content Include="assets\js\i18n\tk.js" />
+    <Content Include="assets\js\i18n\tr.js" />
+    <Content Include="assets\js\i18n\uk.js" />
+    <Content Include="assets\js\i18n\vi.js" />
+    <Content Include="assets\js\i18n\zh-CN.js" />
+    <Content Include="assets\js\i18n\zh-TW.js" />
+    <Content Include="assets\js\jquery-1.8.3.min.js" />
+    <Content Include="assets\js\jquery.blockUI.min.js" />
+    <Content Include="assets\js\jquery.mask.min.js" />
+    <Content Include="assets\js\jquery.maskedinput.min.js" />
+    <Content Include="assets\js\jquery.migrate-3.3.2.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.numeric.js" />
+    <Content Include="assets\js\login.js" />
+    <Content Include="assets\js\metismenujs.min.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\js\select2.min.js" />
+    <Content Include="assets\js\Teclado.js" />
+    <Content Include="assets\js\uikit-fa-all-icons.min.js" />
+    <Content Include="assets\js\uikit-icons.min.js" />
+    <Content Include="assets\js\uikit.min.js" />
+    <Content Include="assets\js\vanilla-masker.min.js" />
+    <Content Include="AutorizarSolicitud.aspx" />
+    <Content Include="Controles\MensajeAlertas.ascx" />
+    <Content Include="Estilos\Autorizaciones.css" />
+    <Content Include="Estilos\chosen-sprite%402x.png" />
+    <Content Include="Estilos\chosen-sprite.png" />
+    <Content Include="Estilos\chosen.css" />
+    <Content Include="Estilos\Contactenos.css" />
+    <Content Include="Estilos\datepicker.css" />
+    <Content Include="Estilos\Estilos.css" />
+    <Content Include="Estilos\Fuentes.css" />
+    <Content Include="Estilos\Grilla.css" />
+    <Content Include="Estilos\IngresoLogin.css" />
+    <Content Include="Estilos\Login.css" />
+    <Content Include="Estilos\normalize.css" />
+    <Content Include="Estilos\PopupPersonalizado.css" />
+    <Content Include="Estilos\PrincipalMaster.css" />
+    <Content Include="Estilos\Responsive-Grilla.css" />
+    <Content Include="Estilos\Responsive-Login.css" />
+    <Content Include="Estilos\Responsive-Master.css" />
+    <Content Include="Estilos\Teclado.css" />
+    <Content Include="Fases.aspx" />
+    <Content Include="Fases_Actividad.aspx" />
+    <Content Include="frmAlmacen.aspx" />
+    <Content Include="frmArea.aspx" />
+    <Content Include="frmAutorizadores.aspx" />
+    <Content Include="frmBusquedaProyecto.aspx" />
+    <Content Include="frmCargos.aspx" />
+    <Content Include="frmCliente.aspx" />
+    <Content Include="frmDetalleAutorizadores.aspx" />
+    <Content Include="frmGrupo.aspx" />
+    <Content Include="frmLugarEntrega.aspx" />
+    <Content Include="frmModulo.aspx" />
+    <Content Include="frmObservaciones.aspx" />
+    <Content Include="frmOpcion.aspx" />
+    <Content Include="frmPersonalx.aspx" />
+    <Content Include="frmPrincipal.aspx" />
+    <Content Include="frmProyectos.aspx" />
+    <Content Include="frmSolicitudCompra.aspx" />
+    <Content Include="frmUnidad.aspx" />
+    <Content Include="frmUsuarioOpcion.aspx" />
+    <Content Include="frmUsuarios.aspx" />
+    <Content Include="Fuente\OpenSans-Bold.svg" />
+    <Content Include="Fuente\OpenSans-Regular.svg" />
+    <Content Include="Fuente\OpenSans-Semibold.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagenes\banner.png" />
+    <Content Include="Imagenes\check-3.png" />
+    <Content Include="Imagenes\check.png" />
+    <Content Include="Imagenes\check_.png" />
+    <Content Include="Imagenes\favicon.png" />
+    <Content Include="Imagenes\flecha.png" />
+    <Content Include="Imagenes\Gif_Famosa.gif" />
+    <Content Include="Imagenes\Gif_Famosa1.gif" />
+    <Content Include="Imagenes\Gif_Famosa2.gif" />
+    <Content Include="Imagenes\Gif_Famosa4.gif" />
+    <Content Include="Imagenes\icon_activacion.png" />
+    <Content Include="Imagenes\icon_actulizar.png" />
+    <Content Include="Imagenes\icon_check.png" />
+    <Content Include="Imagenes\icon_colapsar.png" />
+    <Content Include="Imagenes\icon_consejos_seguridad.png" />
+    <Content Include="Imagenes\icon_expandir.png" />
+    <Content Include="Imagenes\icon_lista.png" />
+    <Content Include="Imagenes\icon_manual.png" />
+    <Content Include="Imagenes\icon_notificaciones.png" />
+    <Content Include="Imagenes\icon_preguntas_frecuentes.png" />
+    <Content Include="Imagenes\icon_verisign.png" />
+    <Content Include="Imagenes\icon_zona_segura.png" />
+    <Content Include="Imagenes\Llave.png" />
+    <Content Include="Imagenes\loading.gif" />
+    <Content Include="Imagenes\logo_camino.png" />
+    <Content Include="Imagenes\logo_fassil.png" />
+    <Content Include="Imagenes\logo_fassil_net.png" />
+    <Content Include="Imagenes\mainnav-bg.png" />
+    <Content Include="Imagenes\principal.png" />
+    <Content Include="Imagenes\principal_siscon.png" />
+    <Content Include="Imagenes\web_03.png" />
+    <Content Include="IngresoMaterial.aspx" />
+    <Content Include="JavaScript\Autorizaciones.js" />
+    <Content Include="JavaScript\chosen.jquery.min.js" />
+    <Content Include="JavaScript\html5.js" />
+    <Content Include="JavaScript\jquery-1.7.1.js" />
+    <Content Include="JavaScript\jquery-1.7.1.min.js" />
+    <Content Include="dsPersonal.xsc">
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
+    </Content>
+    <None Include="dsPersonal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPersonal.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsPersonal.xss">
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
+    </Content>
+    <Content Include="Index.Master" />
+    <None Include="JavaScript\jquery-1.8.2.intellisense.js" />
+    <Content Include="JavaScript\jquery-1.8.2.js" />
+    <Content Include="JavaScript\jquery-1.8.2.min.js" />
+    <Content Include="JavaScript\jquery-1.9.1.js" />
+    <Content Include="JavaScript\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="JavaScript\jquery.blockUI.js" />
+    <Content Include="JavaScript\jquery.disable.autocomplete.js" />
+    <Content Include="JavaScript\jquery.maskedinput.min.js" />
+    <Content Include="JavaScript\jquery.numeric.js" />
+    <Content Include="JavaScript\Login.js" />
+    <Content Include="JavaScript\PopupPersonalizado.js" />
+    <Content Include="JavaScript\PopupPerzonalizadoChequera.js" />
+    <Content Include="JavaScript\PopupPerzonalizadoPDS.js" />
+    <Content Include="JavaScript\PrincipalMaster.js" />
+    <Content Include="JavaScript\Resposive-Master.js" />
+    <Content Include="JavaScript\Teclado.js" />
+    <Content Include="JavaScript\Utilidades.js" />
+    <Content Include="letras\00.png" />
+    <Content Include="letras\01-01.png" />
+    <Content Include="letras\01-02.png" />
+    <Content Include="letras\01-03.png" />
+    <Content Include="letras\01-04.png" />
+    <Content Include="letras\01-05.png" />
+    <Content Include="letras\01-06.png" />
+    <Content Include="letras\01-07.png" />
+    <Content Include="letras\01-08.png" />
+    <Content Include="letras\01-09.png" />
+    <Content Include="letras\01.png" />
+    <Content Include="letras\02--38.png" />
+    <Content Include="letras\02--39.png" />
+    <Content Include="letras\02--41.png" />
+    <Content Include="letras\02-01.png" />
+    <Content Include="letras\02-02.png" />
+    <Content Include="letras\02-03.png" />
+    <Content Include="letras\02-04.png" />
+    <Content Include="letras\02-05.png" />
+    <Content Include="letras\02-06.png" />
+    <Content Include="letras\02-07.png" />
+    <Content Include="letras\02-08.png" />
+    <Content Include="letras\02-09.png" />
+    <Content Include="letras\02-10.png" />
+    <Content Include="letras\02-11.png" />
+    <Content Include="letras\02-12.png" />
+    <Content Include="letras\02-13.png" />
+    <Content Include="letras\02-14.png" />
+    <Content Include="letras\02-15.png" />
+    <Content Include="letras\02-16.png" />
+    <Content Include="letras\02-17.png" />
+    <Content Include="letras\02-18.png" />
+    <Content Include="letras\02-19.png" />
+    <Content Include="letras\02-20.png" />
+    <Content Include="letras\02-21.png" />
+    <Content Include="letras\02-22.png" />
+    <Content Include="letras\02-23.png" />
+    <Content Include="letras\02-24.png" />
+    <Content Include="letras\02-25.png" />
+    <Content Include="letras\02-26.png" />
+    <Content Include="letras\02-27.png" />
+    <Content Include="letras\02-28.png" />
+    <Content Include="letras\02.png" />
+    <Content Include="letras\03.png" />
+    <Content Include="letras\04.png" />
+    <Content Include="letras\05.png" />
+    <Content Include="letras\06.png" />
+    <Content Include="letras\07.png" />
+    <Content Include="letras\08.png" />
+    <Content Include="letras\09.png" />
+    <Content Include="letras\asterisco.png" />
+    <Content Include="letras\borrar.png" />
+    <Content Include="letras\teclado-01.png" />
+    <Content Include="letras\teclado-02.png" />
+    <Content Include="letras\teclado-03.png" />
+    <Content Include="letras\teclado-04.png" />
+    <Content Include="letras\teclado-05.png" />
+    <Content Include="letras\teclado-06.png" />
+    <Content Include="letras\teclado-07.png" />
+    <Content Include="letras\teclado-08.png" />
+    <Content Include="letras\teclado-09.png" />
+    <Content Include="letras\teclado-10.png" />
+    <Content Include="letras\teclado-11.png" />
+    <Content Include="letras\teclado-12.png" />
+    <Content Include="letras\teclado-13.png" />
+    <Content Include="letras\teclado-14.png" />
+    <Content Include="letras\teclado-15.png" />
+    <Content Include="letras\teclado-16.png" />
+    <Content Include="letras\teclado-17.png" />
+    <Content Include="letras\teclado-18.png" />
+    <Content Include="letras\teclado-19.png" />
+    <Content Include="letras\teclado-20.png" />
+    <Content Include="letras\teclado-21.png" />
+    <Content Include="letras\teclado-22.png" />
+    <Content Include="letras\teclado-23.png" />
+    <Content Include="letras\teclado-24.png" />
+    <Content Include="letras\teclado-25.png" />
+    <Content Include="letras\teclado-26.png" />
+    <Content Include="letras\teclado-27.png" />
+    <Content Include="letras\teclado-28.png" />
+    <Content Include="letras\teclado-29.png" />
+    <Content Include="letras\teclado-30.png" />
+    <Content Include="letras\teclado-31.png" />
+    <Content Include="letras\teclado-32.png" />
+    <Content Include="letras\teclado-33.png" />
+    <Content Include="letras\teclado-34.png" />
+    <Content Include="letras\teclado-35.png" />
+    <Content Include="letras\teclado-36.png" />
+    <Content Include="letras\teclado-37.png" />
+    <Content Include="letras\teclado-38.png" />
+    <Content Include="letras\teclado-39.png" />
+    <Content Include="letras\teclado-40.png" />
+    <Content Include="letras\teclado-fassil original-38.png" />
+    <Content Include="letras\teclado-fassil original-39.png" />
+    <Content Include="letras\teclado-fassil original-41.png" />
+    <Content Include="letras\teclado-fassil original-44.png" />
+    <Content Include="frmMaterial.aspx" />
+    <Content Include="frmProyecto_Material.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ReportePersonal.aspx" />
+    <Content Include="SalidasAlmacen.aspx" />
+    <Content Include="Slices\01_icon_desactivado.png" />
+    <Content Include="Slices\01_icon_desactivado_smart.png" />
+    <Content Include="Slices\02_icon_hover.png" />
+    <Content Include="Slices\02_icon_hover_smart.png" />
+    <Content Include="Slices\03_icon_activado.png" />
+    <Content Include="Slices\03_icon_activado_smart.png" />
+    <Content Include="Slices\bg_head.png" />
+    <Content Include="Slices\BG_Smart-abajo.png" />
+    <Content Include="Slices\BG_Smart-arriba.png" />
+    <Content Include="Slices\BG_Smart-centro.png" />
+    <Content Include="Slices\BG_Smart.png" />
+    <Content Include="Slices\bg_smart_A_iniciar_sesion.png" />
+    <Content Include="Slices\bg_smart_B_interior.png" />
+    <Content Include="Slices\chosen-sprite.png" />
+    <Content Include="Slices\CNVM-3.0.png" />
+    <Content Include="Slices\CNVM-3.0old.jpg" />
+    <Content Include="Slices\combo.png" />
+    <Content Include="Slices\combo2.png" />
+    <Content Include="Slices\combo3.png" />
+    <Content Include="Slices\Contactanos.png" />
+    <Content Include="Slices\detalle_cuenta_smart.png" />
+    <Content Include="Slices\flecha doble_bco - abajo.png" />
+    <Content Include="Slices\flecha doble_bco.png" />
+    <Content Include="Slices\flecha doble_gris.png" />
+    <Content Include="Slices\flecha doble_gris_abajo.png" />
+    <Content Include="Slices\flecha_menu_smart.png" />
+    <Content Include="Slices\flecha_notificaciones_smart.png" />
+    <Content Include="Slices\head_tablet.png" />
+    <Content Include="Slices\head_tablet2.png" />
+    <Content Include="Slices\head_tablet3.png" />
+    <Content Include="Slices\icono.png" />
+    <Content Include="Slices\icon_activacion.png" />
+    <Content Include="Slices\icon_actulizar.png" />
+    <Content Include="Slices\icon_calendar.png" />
+    <Content Include="Slices\icon_calendar_tablet_y_smart.png" />
+    <Content Include="Slices\icon_check.png" />
+    <Content Include="Slices\icon_colapsar.png" />
+    <Content Include="Slices\icon_colapsar_tablet.png" />
+    <Content Include="Slices\icon_consejos_seguridad.png" />
+    <Content Include="Slices\icon_expandir.png" />
+    <Content Include="Slices\icon_expandir_tablet.png" />
+    <Content Include="Slices\icon_lista.png" />
+    <Content Include="Slices\icon_lista2.png" />
+    <Content Include="Slices\icon_lista3.jpg" />
+    <Content Include="Slices\icon_manual.png" />
+    <Content Include="Slices\icon_menu_smart.png" />
+    <Content Include="Slices\icon_menu_tablet.png" />
+    <Content Include="Slices\icon_notificaciones.png" />
+    <Content Include="Slices\icon_notificaciones_smart.png" />
+    <Content Include="Slices\icon_notificaciones_tablet.png" />
+    <Content Include="Slices\icon_preguntas_frecuentes.png" />
+    <Content Include="Slices\icon_verisign.png" />
+    <Content Include="Slices\icon_zona_segura.png" />
+    <Content Include="Slices\icon_zona_segura_smart.png" />
+    <Content Include="Slices\icon_zona_segura_tablet.png" />
+    <Content Include="Slices\iphne_v2.png" />
+    <Content Include="Slices\logo_fassil.png" />
+    <Content Include="Slices\logo_fassil_escritorio.png" />
+    <Content Include="Slices\logo_fassil_net.png" />
+    <Content Include="Slices\logo_fassil_net_tablet.png" />
+    <Content Include="Slices\logo_fassil_smart.png" />
+    <Content Include="Slices\logo_fassil_tablet.png" />
+    <Content Include="Slices\mas_bco.png" />
+    <Content Include="Slices\menos_bco.png" />
+    <Content Include="Slices\Seguridad.png" />
+    <Content Include="Slices\teclado_mayusculas.png" />
+    <Content Include="Slices\teclado_minusculas.png" />
+    <Content Include="Slices\web_03.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TraspasoAlmacen.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Principal.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\Sesion.cs" />
+    <Compile Include="AppCode\Utilitarios.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutorizarSolicitud.aspx.cs">
+      <DependentUpon>AutorizarSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutorizarSolicitud.aspx.designer.cs">
+      <DependentUpon>AutorizarSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\MensajeAlertas.ascx.cs">
+      <DependentUpon>MensajeAlertas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\MensajeAlertas.ascx.designer.cs">
+      <DependentUpon>MensajeAlertas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dsPersonal.cs">
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsPersonal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fases.aspx.cs">
+      <DependentUpon>Fases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fases.aspx.designer.cs">
+      <DependentUpon>Fases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fases_Actividad.aspx.cs">
+      <DependentUpon>Fases_Actividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fases_Actividad.aspx.designer.cs">
+      <DependentUpon>Fases_Actividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlmacen.aspx.cs">
+      <DependentUpon>frmAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAlmacen.aspx.designer.cs">
+      <DependentUpon>frmAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmArea.aspx.cs">
+      <DependentUpon>frmArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmArea.aspx.designer.cs">
+      <DependentUpon>frmArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutorizadores.aspx.cs">
+      <DependentUpon>frmAutorizadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAutorizadores.aspx.designer.cs">
+      <DependentUpon>frmAutorizadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaProyecto.aspx.cs">
+      <DependentUpon>frmBusquedaProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaProyecto.aspx.designer.cs">
+      <DependentUpon>frmBusquedaProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargos.aspx.cs">
+      <DependentUpon>frmCargos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCargos.aspx.designer.cs">
+      <DependentUpon>frmCargos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente.aspx.cs">
+      <DependentUpon>frmCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCliente.aspx.designer.cs">
+      <DependentUpon>frmCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalleAutorizadores.aspx.cs">
+      <DependentUpon>frmDetalleAutorizadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDetalleAutorizadores.aspx.designer.cs">
+      <DependentUpon>frmDetalleAutorizadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrupo.aspx.cs">
+      <DependentUpon>frmGrupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmGrupo.aspx.designer.cs">
+      <DependentUpon>frmGrupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLugarEntrega.aspx.cs">
+      <DependentUpon>frmLugarEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLugarEntrega.aspx.designer.cs">
+      <DependentUpon>frmLugarEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmModulo.aspx.cs">
+      <DependentUpon>frmModulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmModulo.aspx.designer.cs">
+      <DependentUpon>frmModulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmObservaciones.aspx.cs">
+      <DependentUpon>frmObservaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmObservaciones.aspx.designer.cs">
+      <DependentUpon>frmObservaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpcion.aspx.cs">
+      <DependentUpon>frmOpcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmOpcion.aspx.designer.cs">
+      <DependentUpon>frmOpcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonalx.aspx.cs">
+      <DependentUpon>frmPersonalx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPersonalx.aspx.designer.cs">
+      <DependentUpon>frmPersonalx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.aspx.cs">
+      <DependentUpon>frmPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.aspx.designer.cs">
+      <DependentUpon>frmPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmProyectos.aspx.cs">
+      <DependentUpon>frmProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmProyectos.aspx.designer.cs">
+      <DependentUpon>frmProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSolicitudCompra.aspx.cs">
+      <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSolicitudCompra.aspx.designer.cs">
+      <DependentUpon>frmSolicitudCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnidad.aspx.cs">
+      <DependentUpon>frmUnidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUnidad.aspx.designer.cs">
+      <DependentUpon>frmUnidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarioOpcion.aspx.cs">
+      <DependentUpon>frmUsuarioOpcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUsuarioOpcion.aspx.designer.cs">
+      <DependentUpon>frmUsuarioOpcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.aspx.cs">
+      <DependentUpon>frmUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.aspx.designer.cs">
+      <DependentUpon>frmUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.Master.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.Master.designer.cs">
+      <DependentUpon>Index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoMaterial.aspx.cs">
+      <DependentUpon>IngresoMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresoMaterial.aspx.designer.cs">
+      <DependentUpon>IngresoMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPopUp.Master.cs">
+      <DependentUpon>MasterPopUp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPopUp.Master.designer.cs">
+      <DependentUpon>MasterPopUp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterial.aspx.cs">
+      <DependentUpon>frmMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMaterial.aspx.designer.cs">
+      <DependentUpon>frmMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmProyecto_Material.aspx.cs">
+      <DependentUpon>frmProyecto_Material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmProyecto_Material.aspx.designer.cs">
+      <DependentUpon>frmProyecto_Material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="dsSolicitud.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSolicitud.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePersonal.aspx.cs">
+      <DependentUpon>ReportePersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportePersonal.aspx.designer.cs">
+      <DependentUpon>ReportePersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalidasAlmacen.aspx.cs">
+      <DependentUpon>SalidasAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalidasAlmacen.aspx.designer.cs">
+      <DependentUpon>SalidasAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TraspasoAlmacen.aspx.cs">
+      <DependentUpon>TraspasoAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraspasoAlmacen.aspx.designer.cs">
+      <DependentUpon>TraspasoAlmacen.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fuente\OpenSans-Bold.eot" />
+    <Content Include="Fuente\OpenSans-Bold.otf" />
+    <Content Include="Fuente\OpenSans-Bold.ttf" />
+    <Content Include="Fuente\OpenSans-Bold.woff" />
+    <Content Include="Fuente\OpenSans-Regular.eot" />
+    <Content Include="Fuente\OpenSans-Regular.otf" />
+    <Content Include="Fuente\OpenSans-Regular.ttf" />
+    <Content Include="Fuente\OpenSans-Regular.woff" />
+    <Content Include="Fuente\OpenSans-Semibold.eot" />
+    <Content Include="Fuente\OpenSans-Semibold.otf" />
+    <Content Include="Fuente\OpenSans-Semibold.ttf" />
+    <Content Include="Fuente\OpenSans-Semibold.woff" />
+    <Content Include="MasterPopUp.Master" />
+    <Content Include="Login.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Caminos Fassil.pubxml" />
+    <None Include="Properties\PublishProfiles\WebCaminos.pubxml" />
+    <Content Include="dsSolicitud.xsc">
+      <DependentUpon>dsSolicitud.xsd</DependentUpon>
+    </Content>
+    <None Include="dsSolicitud.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSolicitud.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsSolicitud.xss">
+      <DependentUpon>dsSolicitud.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{6ca59b21-0aee-4a5e-818a-f462f987a26d}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaCaminos\LogicaSiscon.csproj">
+      <Project>{7a9dab10-7532-4864-9880-494752ff3453}</Project>
+      <Name>LogicaSiscon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rptPersonal.rdlc" />
+    <Content Include="rptPersonalEmpresa.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58451/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

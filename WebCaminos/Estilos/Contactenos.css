@@ -1,0 +1,53 @@
+﻿#ContentPlaceHolder_txtTelefono {
+    width:340px;
+}
+
+#ContentPlaceHolder_txtCorreo {
+    width:340px;
+}
+
+#ContentPlaceHolder_txtAsunto {
+    width:340px;
+}
+
+#ContentPlaceHolder_txtDetalle {
+    width:340px;
+    margin-bottom:5%;
+}
+
+#divdrpOficina {
+    /*width:350px;*/
+}
+
+#ContentPlaceHolder_drpOficina {
+    width:348px;
+}
+
+@media only screen and (max-device-width: 767px), 
+only screen and (max-device-height: 750px){
+/*@media screen and (max-width: 767px) {*/
+    #ContentPlaceHolder_txtTelefono {
+        width:290px;
+    }
+
+    #ContentPlaceHolder_txtCorreo {
+        width:290px;
+    }
+
+    #ContentPlaceHolder_txtAsunto {
+        width:290px;
+    }
+
+    #ContentPlaceHolder_txtDetalle {
+        width:290px;
+        margin-bottom:10%;
+    }
+
+    #divdrpOficina {
+        width:300px;
+    }
+
+    #ContentPlaceHolder_drpOficina {
+        width:298px;
+    }
+}

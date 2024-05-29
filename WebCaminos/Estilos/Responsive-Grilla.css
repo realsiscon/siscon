@@ -1,0 +1,1166 @@
+﻿
+
+*:focus {
+       outline: none;
+    }
+
+@media screen and (max-device-width: 959px) and (min-device-width: 768px){
+/*@media screen and (max-width: 959px) and (min-width: 768px) {*/
+    .titulos {
+        padding-top:40px;
+        width: auto;
+        margin-right:10px;        
+    }
+
+    #tecladoClave {
+        display:none;
+    }
+
+    /*.firmantes {
+        display:none;
+    }*/
+
+    #idImprimirGuardar {
+        display:none;
+    }
+
+}
+
+@media only screen and (max-device-width: 767px), 
+only screen and (max-device-height: 750px){
+/*@media screen and (max-width: 767px) {*/
+    .titulos {
+        padding-top: 20px;
+        margin-left: 10px;
+        /*margin-right:10px;*/
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+
+    .tbGrilla {
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 0px 0px 0 0;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        width: 300px;
+        margin-top: 0;
+    }
+
+    .tbGrillaBorder {
+        border-radius: 5px;
+    }
+
+    .titulo_grilla_smart {
+        background-image: url("../Slices/flecha doble_bco - abajo.png");
+        background-position: 260px center;
+        background-repeat: no-repeat;
+        border-radius: 7px;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-top: 1px;
+        padding-left: 10px;
+        text-align: left;
+        width: 290px;
+        background-color: #042352;
+        color: #FFFFFF;
+        font-family: 'segoeregular';
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 2px;
+        padding-top: 5px;
+        cursor: pointer;
+        font-weight: normal;
+    }
+
+    .subtitulo_smart {
+        border-right: 1px solid #8F9094;
+        color: #36B7C1;
+        font-family: 'segoeregular';
+        font-size: 13px;
+        font-weight: normal;
+        padding: 3px 0 3px 10px;
+        width: 55%;
+    }
+
+    .item_smart {
+        color: #042352;
+        font-family: 'segoeregular';
+        font-size: 12px;
+        font-weight: normal;
+        padding: 3px;
+        text-align: right;
+        width: 45%;
+    }
+
+    .acciones_combo {
+        border: 1px solid #042352;
+        width: 130px;
+    }
+
+    .tbGrilla_detalle_primero {
+        border-top: 0;
+        margin-top: 0;
+        border-color: #8F9094;
+        border-radius: 7px;
+        border-right: 1px solid #8F9094;
+        border-spacing: 0;
+        border-radius: 5px;
+        border-left: 1px solid #8F9094;
+        border-right: 1px solid #8F9094;
+        border-bottom: 1px solid #8F9094;
+        margin: 0 10px;
+        width: 300px;
+        border-collapse: initial;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    #ver_detalle {
+        background-color: #DDDBE0;
+        font-family: 'segoebold';
+        font-size: 18px;
+        /*font-weight: bold;*/
+        height: 30px;
+        margin: 0 10px;
+        text-align: center;
+        width: 298px;
+        color: #A5A4A9;
+        background-image: url('../Slices/flecha doble_gris_abajo.png');
+        background-position: 258px center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border-left: 1px solid #8F9094;
+        border-right: 1px solid #8F9094;
+        border-bottom: 1px solid #8F9094;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+    #ver_detalle_tarjeta {
+        background-color: #DDDBE0;
+        font-family: 'segoebold';
+        font-size: 18px;
+        /*font-weight: bold;*/
+        height: 30px;
+        margin: 0 10px;
+        text-align: center;
+        width: 298px;
+        color: #A5A4A9;
+        background-image: url('../Slices/flecha doble_gris_abajo.png');
+        background-position: 258px center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border-left: 1px solid #8F9094;
+        border-right: 1px solid #8F9094;
+        border-bottom: 1px solid #8F9094;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+    #ver_detalle_tarjeta_credito {
+        background-color: #DDDBE0;
+        font-family: 'segoebold';
+        font-size: 18px;
+        /*font-weight: bold;*/
+        height: 30px;
+        margin: 0 10px;
+        text-align: center;
+        width: 298px;
+        color: #A5A4A9;
+        background-image: url('../Slices/flecha doble_gris_abajo.png');
+        background-position: 258px center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border-left: 1px solid #8F9094;
+        border-right: 1px solid #8F9094;
+        border-bottom: 1px solid #8F9094;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+
+        /*QUitar esta liniea cuando tenga detalle*/
+        visibility:hidden;
+    }
+
+    .tbGrilla_detalle {
+        border-color: #8F9094;
+        border-radius: 7px;
+        border-right: 1px solid #8F9094;
+        border-spacing: 0;
+        border-radius: 5px;
+        border: 1px solid #8F9094;
+        margin: 0 10px;
+        margin-top: 5px;
+        width: 300px;
+        border-collapse: initial;
+    }
+
+
+    .detalle_subtitulo_smart {
+        border-right: 1px solid #8F9094;
+        color: #A5A4A9;
+        font-family: 'segoeregular';
+        font-size: 13px;
+        font-weight: normal;
+        padding: 3px 0 3px 10px;
+        width: 55%;
+
+    }
+
+    #ContentPlaceHolder_PosicionConsolidadaSmartphone {
+        display: block;
+    }
+
+    #ContentPlaceHolder_PosicionConsolidada {
+        display: none;
+    }
+
+    #pc_smartphone {
+        display: none;
+    }
+
+    #ContentPlaceHolder_detalle_pc_smartphone {
+        display: none;
+    }
+
+    #tarjeta_smartphone {
+        display: none;
+    }
+
+    #ContentPlaceHolder_detalle_tarjeta_smartphone {
+        display:none;
+    }
+
+    #tarjeta_credito_smartphone {
+        display: none;
+    }
+
+    #ContentPlaceHolder_detalle_tarjeta_credito_smartphone {
+        display:none;
+    }
+
+    #pres_smartphone {
+        display: none;
+    }
+
+    #DPF_smartphone {
+        display: none;
+    }
+
+    #contenedorGrilla {
+        display: none;
+    }
+
+    #estado_cuenta_smart {
+        display: block;
+    }
+
+    #ContentPlaceHolder_id_estado_cuenta {
+        display: block;
+    }
+
+    #extracto_cuenta_smart {
+        display: block;
+    }
+
+    #hFiltro {
+        display: none;
+    }
+
+    #extractos_fechas {
+        display: none;
+    }
+
+
+    #ContentPlaceHolder_id_extracto_cuenta {
+        display: block;
+    }
+
+    #saldopromedio_cuenta_smart {
+        display: block;
+    }
+
+    #ContentPlaceHolder_id_saldopromedio_cuenta {
+        display: block;
+    }
+
+
+    #saldoconfirmar_cuenta_smart {
+        display: block;
+    }
+
+    #ContentPlaceHolder_id_saldoconfirmar_cuenta {
+        display: block;
+    }
+
+    #ContentPlaceHolder_idSaldosConfirmarDatosSmart {
+        display:block;
+    }
+
+    #ContentPlaceHolder_idSaldoConfirmarDatos {
+        display:none;
+    }
+
+    .txtCampos {
+        width: 85%;
+    }
+
+    #ContentPlaceHolder_btnBuscar {
+        display: none;
+    }
+
+    #ContentPlaceHolder_btnBuscarSmartP {
+        display: block;
+        width: 300px;
+    }
+
+    #datos {
+        width: 95%;
+        margin-left: 10px;
+
+        border: 1px solid #5094C3;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        margin-right: auto;
+        margin-top: 15px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: center;
+        background-color: #F7F6F2;
+
+    }
+
+    #datoDetalle {
+        width: 95%;
+        margin-left: 10px;
+
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        border: 1px solid #5094C3;
+        margin-right: auto;
+        text-align: right;
+        border-top:0;
+        text-align:right;
+        height:130px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    #datosSmart {
+        width: 95%;
+        margin-left: 10px;
+
+        border: 1px solid #5094C3;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        margin-right: auto;
+        margin-top: 15px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: center;
+        background-color: #F7F6F2;
+
+    }
+
+    #datoDetalleSmart {
+        width: 95%;
+        margin-left: 10px;
+
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        border: 1px solid #5094C3;
+        margin-right: auto;
+        text-align: right;
+        border-top:0;
+        text-align:right;
+        height:130px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    #tecladoClave {
+        display: none;
+    }
+
+    
+    #ContentPlaceHolder_txtFecha {
+        width: 265px;
+    }
+
+    #ContentPlaceHolder_idExtractosDatos {
+        display:none;
+    }
+
+    #ContentPlaceHolder_idExtractosDatosSmart {
+        display:block;
+    }
+
+/*--------Sobregiros---------------------*/
+    #SobregiroSmart {
+        display:block;
+    }
+
+    #SobregiroPC {
+        display:none;
+    }
+
+    #ContentPlaceHolder_DetalleSobregirosPC {
+        display:none;
+    }
+
+    #ContentPlaceHolder_DetalleSobregirosSmart {
+        display:block;
+    }
+    /*-------Traspasos-----------------*/
+    .titulo_ficha {
+        margin-left: 10px;
+        margin-top: 1px;
+        padding-left: 10px;
+        text-align: left;
+        width: 290px;
+        background-color: #042352;
+        color: #FFFFFF;
+        font-family: 'segoeregular';
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 2px;
+        padding-top: 5px;
+        cursor: pointer;
+        display: block;
+        margin-bottom: 0;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        font-weight: normal;
+    }
+
+    #cuentas_origen_destino_smart {
+        display: block;
+    }
+
+    #cuentas_origen_destino {
+        display: none;
+    }
+
+
+    #ContentPlaceHolder_txtMonto {
+        width: 140px;
+    }
+
+    #ContentPlaceHolder_txtMontoP {
+        width: 153px;
+    }
+
+    #ContentPlaceHolder_btnTraspasarSmart {
+        display: block;
+    }
+
+    #ContentPlaceHolder_btnTraspasar {
+        display: none;
+    }
+
+    #ConfirmacionSmart {
+        display: block;
+    }
+
+    #ConfirmacionID {
+        display: none;
+    }
+
+    #traspasos_pendientes {
+        display: none;
+    }
+
+    #traspasos_pendientes_smart {
+        display: block;
+    }
+
+    .il_botones2 {
+        width: 300px;
+    }
+
+    .il_botones {
+        width: 300px;
+    }
+    /*--------------Transferencias---------------------*/
+    #trans_agregar_cta_terceros {
+        width: 100%;
+    }
+
+    #ContentPlaceHolder_panelNuevaCuenta {
+        height: 305px;
+    }
+
+    #ContentPlaceHolder_cmdTransferirSmart {
+        display: block;
+    }
+
+    #ContentPlaceHolder_cmdTransferir {
+        display: none;
+    }
+
+    /*-------------Transferencias ACH-----------------*/
+    #agregar_cta_terceros1 {
+        float: none;
+        height: 185px;
+        width: 100%;
+    }
+
+    #agregar_cta_terceros2 {
+        float: none;
+        height: 140px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #ContentPlaceHolder_panelNuevaCuentaACH {
+        height: auto;
+        margin-left: 10px;
+    }
+
+    #ContentPlaceHolder_btnTransferirSmart {
+        display: block;
+    }
+
+    #ContentPlaceHolder_btnTransferir {
+        display: none;
+    }
+
+    #ContentPlaceHolder_txtDesc {
+        width:290px;
+    }
+
+    /*-------Solicitud Chequera---------------*/
+    #cuentas_solicitud_chequeras {
+        display: none;
+    }
+
+    #cuentas_solicitud_chequeras_smart {
+        display: block;
+    }
+
+    #datoDetalle_solcheq {
+        height: auto;
+    }
+
+    #solcheq_left {
+        float: none;
+        padding-top: 0px;
+        width: 97%;
+        margin-top: 15px;
+    }
+
+    #solcheq_right {
+        float: none;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: 10px;
+        width: 97%;
+    }
+
+    #agenciaChequera_left {
+        float: none;
+        width: 97%;
+    }
+
+    #agenciaChequera_right {
+        float: none;
+        padding-left: 10px;
+        padding-right: 0;
+        padding-top: 0;
+        width: 97%;
+    }
+
+    #ContentPlaceHolder_txtClaveTran1 {
+        width: 290px;
+    }
+
+    #sol_cheq_mensaje {
+        width: 97%;
+        margin-left: 10px;
+    }
+
+    #ContentPlaceHolder_txtDirEntrega {
+        width: 280px;
+    }
+
+    #ContentPlaceHolder_txtClaveTran1 {
+        width: 290px;
+    }
+
+    #ContentPlaceHolder_btnEnviarSolicitud {
+        display: none;
+    }
+
+    #ContentPlaceHolder_btnEnviarSolicitudSmart {
+        display: block;
+    }
+
+    /*---------Consulta Transf ACH------------------------*/
+
+    /*#ContentPlaceHolder_cmbOperacionesSmart {
+        display: block;
+        width:300px;
+    }*/
+
+    #divcmbOperacionesSmart {
+        display:block;
+    }
+
+    #ContentPlaceHolder_btnBuscarTransACHSmart {
+        display: block;
+        width:300px;
+    }
+
+    /*#ContentPlaceHolder_cmbOperaciones{
+        display: none;
+    }*/
+
+    #divcmbOperaciones {
+        display:none;
+    }
+
+    #ContentPlaceHolder_btnBuscarTransACH {
+        display:none;
+    }
+
+    #ContentPlaceHolder_SmartTablaTransfACH {
+        display:block;
+    }
+
+    #ContentPlaceHolder_TablaTransfACH {
+        display:none;
+    }
+
+    /*---------Habilitacion de chequera----------*/
+    #cuentas_hab_chequeras_smart {
+        display:block;
+    }
+
+    #cuentas_hab_chequeras {
+        display:none;
+    }
+
+    #ContentPlaceHolder_btnEnviarHabilitacionSmart {
+        display:block;
+    }
+
+    #ContentPlaceHolder_btnEnviarHabilitacion{
+        display:none;
+    }
+    /*-------------Pago de prestamo----------------*/
+    #cuentas_prestamos_origen_smart {
+        display:block;
+    }
+
+    #cuentas_prestamos_origen {
+        display:none;
+    }
+
+    #ContentPlaceHolder_cmdPrestamoSmart {
+        display:block;
+    }
+
+    #ContentPlaceHolder_cmdPrestamo {
+        display:none;
+    }
+    /*---------Plan de pagos--------------------*/
+    #prestamos_plan_pagos_smart {
+        display:block;
+    }
+
+    #prestamos_plan_pagos{
+        display:none;
+    }
+
+    #ContentPlaceHolder_idPagoDatosPC {
+         display:none;
+    }
+
+    #ContentPlaceHolder_idPagoDatosSmart {
+         display:block;
+    }
+
+    #extractos_datos_pp {
+        height: 60px;
+    }
+
+    /*--------Preliquidacion---------------------*/
+    #prestamos_preliquidacion_smart {
+        display:block;
+    }
+
+    #prestamos_preliquidacion {
+        display:none;
+    }
+
+    #extractos_datos_smart {
+        display:none;
+    }
+
+    #extractos_datos_smartphone {
+        display:block;
+    }
+
+    .tbGrillaPreliquidacion {
+        border-radius:5px;
+    }
+
+    /*-----Estado DPF----------------------------*/
+    #EstadoDPFSmart {
+        display:block;
+    }
+
+    #EstadoDPF {
+        display:none;
+    }
+
+    /*-----Historial DPF----------------------------*/
+    #HistorialDPFSmart {
+        display:block;
+    }
+
+    #HistorialDPF {
+        display:none;
+    }
+
+    #ContentPlaceHolder_DatosHistorialDPF {
+        display:none;
+    }
+
+    #ContentPlaceHolder_DatosHistorialDPFSmart {
+        display:block;
+    }
+
+    .historial_datos {
+        width:96%;
+        margin-left: 10px;
+    }
+
+    .historial_datoDetalle {
+        height: 365px; 
+        width:96%;
+        margin-left: 10px;
+    }
+
+    .h_datoDetalle_izq {
+        float: left;
+        padding-left: 35px;
+    }
+
+    .h_datoDetalle_der {
+        float: left;
+        padding-left: 10px;
+        padding-right: 25px;
+    }
+
+    .h_datoDetalle_der_der {
+        float: right;
+        padding-left: 10px;
+    }
+
+    /*#ContentPlaceHolder_gridHistorialSmart {
+        display:block;
+    }
+
+    #gridHistorial {
+        display:none;
+    }*/
+
+    /*----------Movimientos Tarjeta Debito--------*/
+    #ContentPlaceHolder_btnBuscarMovTarjetaSmart {
+        display:block;
+    }
+
+     #ContentPlaceHolder_btnBuscarMovTarjeta{
+        display:none;
+    }
+
+    #TarjetaDebitoSmart {
+        display:block;
+    }
+
+    #TarjetaDebito {
+        display:none;
+    }
+
+    #gridDatosTarjetaDebito {
+        display:none;
+    }
+
+    #ContentPlaceHolder_gridDatosTarjetaDebitoSmart {
+        display:block;
+    }
+
+    /*---------Desactivar Tarjetas de Debito-------*/
+    #ContentPlaceHolder_cmdDesactivarSmart {
+        display:block;
+    }
+
+    #DesactivarTarjetaSmart {
+        display:block;
+    }
+
+    #ContentPlaceHolder_cmdDesactivar {
+        display:none;
+    }
+
+    #DesactivarTarjeta {
+        display:none;
+    }
+
+    /*---------Movimientos Web-------------------*/
+    #ContentPlaceHolder_dgMovimientosWebSmart {
+        display:block;
+    }
+
+    #dgMovimientosWeb {
+        display:none;
+    }
+
+    /*------Alta de Pago de Servicios*/
+    .combo_servicios {
+        width: 300px;
+    }
+
+    .cboDropServicios {
+        width:298px;
+    }
+
+    .txt_servicios {
+        width:290px;
+        text-transform:uppercase;
+    }
+
+    /*--------Planilla Pago-----------------------*/
+    #PagoPlanillaSmart {
+        display:block;
+    }
+
+    #PagoPlanillaPC {
+        display:none;
+    }
+
+    /*----------Planilla Busqueda x fecha----------*/
+
+    #ContentPlaceHolder_DatosPlanillaSmart {
+        display:block;
+    }
+
+    #ContentPlaceHolder_DatosPlanillaPC {
+        display:none;
+    }
+
+    /*----------Pagos Especiales----------------*/
+    #InstitucionSmart {
+        display:block;
+    }
+
+    #InstitucionPC {
+        display:none;
+    }
+
+    /*----------Detalle Pago Especiales*/
+    #CuentasInstitucionSmart {
+        display:block;
+    }
+
+    #CuotasPagarInstitucionSmart {
+        display:block;
+    }
+
+    #CuentasInstitucionPC {
+        display:none;
+    }
+
+    #CuotasPagarInstitucionPC {
+        display:none;
+    }
+
+    #totalPagarSmart {
+        display:block;
+    }
+    #totalPagarPC {
+        display:none;
+    }
+
+    #ContentPlaceHolder_txtMontoS {
+        display:block;
+    }
+    #ContentPlaceHolder_txtMontoP {
+        display:none;
+    }
+    #ContentPlaceHolder_btnPagar {
+        display:none;
+    }
+    #ContentPlaceHolder_btnPagarSmart {
+        display:block;
+    }
+
+    /*------------Movimiento Tarjeta Credito-----*/
+    #MovTarjetasCreditoSmart {
+        display:block;
+    }
+    #MovTarjetasCreditoPC {
+        display:none;
+    }
+    #ContentPlaceHolder_DatosMovTarjetaCredito {
+        display:none;
+    }
+    #ContentPlaceHolder_DatosMovTarjetaCreditoSmart {
+        display:block;
+    }
+    /*-----------Pago Tarjeta de Credito--------*/
+    #PagoTarjetaCreditoSmart {
+        display:block;
+    }
+    #PagoTarjetaCreditoPC {
+        display:none;
+    }
+
+    /*----------Baja de Servicios---------------*/
+    #ServiciosSmart {
+        display:block;
+    }
+    #ServiciosPC {
+        display:none;
+    }
+
+    /*----------Pago de Servicios---------------*/
+    #ServiciosActivosSmart {
+        display:block;
+    }
+
+    #ServiciosActivosPC {
+        display:none;
+    }
+
+    #CuentasOrigenPagoServicioSmart {
+        display:block;
+    }
+
+    #FacturasPagoServicioSmart {
+        display:block;
+    }
+
+    #CuentasOrigenPagoServicio {
+        display:none;
+    }
+
+    #FacturasPagoServicio {
+        display:none;
+    }
+    /*------------Pago Servivio Sintesis y  Prepago-----*/
+    #CodigoPagoServicio {
+        float:none;
+    }
+    #EmpresaPagoServicio {
+        float:none;
+        margin-left:10px;
+    }
+    #ContentPlaceHolder_txtDireccionSintesis {
+        width: 290px;
+    }
+    #DatosPrepago {
+        margin-right: 10px; 
+    }
+
+    #ContentPlaceHolder_AgenciaFactura {
+        display:none;
+    }
+
+    #ContentPlaceHolder_AgenciaFacturaSmart {
+        display:block;
+    }
+
+    #agenciaChequera_leftSmart {
+        float: none;
+        width: 97%;
+        padding-left: 10px;
+        padding-top: 25px;
+    }
+
+    
+    #agenciaChequera_rightSmart {
+        float: none;
+        padding-left: 10px;
+        padding-right: 0;
+        padding-top: 0;
+        width: 97%;
+    }
+
+    #ContentPlaceHolder_txtDireccionSintesisSmart {
+        width: 290px;
+    }
+
+    /*----RUAT Vehiculos------------------------*/
+    #ContentPlaceHolder_txtIdentificador {
+        margin-right: 0;
+        width: 290px;
+    }
+    #ContentPlaceHolder_cbmTipoSeleccion {
+        float: none;
+        margin-left: 0;
+        width: 300px;
+    }
+    #DatosVehiculoSeleccionado {
+        height: auto;
+        margin-bottom: 25px;
+    }
+    #ladoIzquierdoVehiculo {
+        float: none;
+    }
+    
+    #ladoDerechoVehiculo {
+        float: none;
+        margin-right: 0;
+    }
+    #CuentasOrigenVehiculo {
+        display:none;
+    }
+    #DeudasVehiculo {
+        display:none;
+    }
+    #CuentasOrigenVehiculoSmart {
+        display:block;
+        margin-bottom: 20px;
+    }
+    #DeudasVehiculoSmart {
+        display:block;
+        margin-bottom: 20px;
+    }
+    #AgenciaVehiculoSmart {
+        display:block;
+    }
+    #AgenciaVehiculo{
+        display:none;
+    }
+
+    #divcbmTipoSeleccionVehiculo {
+        width: 300px;
+    }
+    /*------------RUAT Inmuebles-------------*/
+    #ContentPlaceHolder_txtIdentificador {
+        margin-bottom:4%;
+    }
+    #divcbmTipoInmueble {
+        margin-bottom: 4%;
+        width: 300px;
+    }
+    #divcbmCodAlcaldia {
+        margin-bottom: 4%;
+        width: 300px;
+    }
+    #ContentPlaceHolder_txtIdentidad {
+        margin-bottom: 4%;
+        margin-right: 0;
+        width: 290px;
+    }
+    #ContentPlaceHolder_lblExpedidoSmart {
+        display:block;
+    }
+    #ContentPlaceHolder_lblExpedido {
+        display:none;
+    }
+    #divcbmIdentidad {
+        margin-bottom: 4%;
+        width: 300px;
+    }
+    #divcbmExpedido {
+        margin-bottom: 0;
+        width: 300px;
+    }
+    #ayudaInmueble {
+        display:none;
+    }
+    #DatosInmuebleSeleccionado {
+        height:auto;
+    }
+    #datosInmuebleIzq {
+        float:none;
+    }
+    #datosInmuebleDer {
+        float:none;
+    }
+    #ContentPlaceHolder_lblNroInmuebleEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblCodAlcaldiaEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblTipoViviendaEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblZonaEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblSupTerrenoEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblDireccionEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblCodCatastralEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblClaseInmuebleEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblClaseInmuebleEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblNroConstruccionEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblAreaEtiq {
+        display: block;
+        width: 300px;
+    }
+    #ContentPlaceHolder_lblSupConstruccionEtiq {
+        display: block;
+        width: 300px;
+    }
+    #CuentasOrigenInmueble {
+        display:none;
+    }
+    #DeudasInmueble {
+        display:none;
+    }
+    #CuentasOrigenInmuebleSmart {
+        display:block;
+        margin-top: 15px;
+    }
+    #DeudasInmuebleSmart {
+        display:block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #AgenciaInmueble {
+        display:none;
+    }
+    #AgenciaInmuebleSmart {
+        display:block;
+    }
+
+    .cmbDrpExpedido {
+        width: 298px;
+    }
+
+    .cmbDrpRuat {
+        width: 298px;
+    }
+
+    /*-----------Comprobantes---------------*/
+    #idImprimirGuardar {
+        display:none;
+    }
+}

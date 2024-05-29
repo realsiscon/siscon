@@ -1,0 +1,1238 @@
+﻿
+
+*:focus {
+    outline: none;
+}
+
+/*---------Grilla General-----------*/
+.tbGrilla {
+    border-spacing: 0;
+    margin-top: 15px;
+    width: 98.8%;
+    border-radius: 5px;
+    border: 1px solid #8F9094;
+    margin-left: 10px;
+    border-collapse: initial;
+}
+
+.tbGrillaHijo {
+    display: none;
+    background-color: #F7F6F3;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.tbGrilla_Detalle {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 7px;
+    border-collapse: initial;
+    -webkit-border-radius: 7px;
+}
+
+.trTitulo {
+    text-align: center;
+}
+
+.trSubTitulo {
+    text-align: center;
+}
+
+    .trSubTitulo td {
+        /*background-color: #36B7C1;*/
+        background-color: #8F9094;
+        border-right: 1px solid #8F9094;
+        color: #FFFFFF;
+        /*font-family: 'segoeregular';*/
+        font-family: "Lucida Grande", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: normal;
+        padding-bottom: 3px;
+        padding-top: 2px;
+    }
+
+        .trSubTitulo td:last-child {
+            border-right: none;
+        }
+
+.titulo_grilla {
+    /*background-color: #042352;*/
+    background-color: black;
+    color: #FFFFFF;
+    /*font-family: 'segoebold';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 18px;
+    /*font-weight: bold;*/
+    padding-bottom: 2px;
+    padding-top: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.EditarRegistro{
+    background:url(../Imagenes/check.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:16px;
+    height:17px;
+}
+
+.EditarRegistro:hover  /* use Dot here */
+{   
+    background:url(../Imagenes/check_.png) no-repeat;
+}
+
+/*.EditarRegistro :hover {
+    background:url(../Imagenes/check_.png);
+    background-repeat:no-repeat;
+    background-position:right;
+}*/
+
+.trSubTitulo_item {
+    text-align: center;
+}
+
+    .trSubTitulo_item td {
+        /*font-family: 'segoeregular';*/
+        font-family: "Lucida Grande", Arial, sans-serif;
+        /*font-size: 13px;*/
+        font-size: 12px;
+        border-right: 1px solid #8F9094;
+        padding-bottom: 3px;
+        padding: 2px;
+        /*color: #042352;*/
+        color: black;
+        font-weight: normal;
+    }
+
+        .trSubTitulo_item td:first-child {
+            width: 100px;
+        }
+
+        .trSubTitulo_item td:last-child {
+            border-right: none;
+        }
+
+.img_desplegar {
+    float: left;
+    cursor: pointer;
+    margin-bottom: -1px;
+}
+.img_desplegarDisplay {
+    float: left;
+    cursor: pointer;
+    margin-bottom: -1px;
+    display:none
+}
+
+.link_saldo {
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: underline;
+    /*color: #042352;*/
+    color: #042472;
+}
+/*-----------------------------------*/
+
+/*-----------Combos------------------*/
+/*.styled-select select {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    border-radius: 0;
+    color:#004e84;  
+}
+
+
+.styled-select {
+   overflow: hidden;
+   border: 1px solid #7AA7C6;
+   border-radius: 7px;
+   background: url('../Slices/icon_lista.png') no-repeat right 2px center;
+   background-image:url('../Imagenes/icon_lista.png');
+   background-repeat:no-repeat;
+   background-position:right;
+}*/
+
+.customSelect {
+    -moz-appearance: none;
+    /*background-color: transparent;*/
+    /*border: 1px solid #b1b2b3;
+    border-radius: 0;*/
+    color: #393939;
+    /*font-size: inherit;*/
+    font-size: 10pt;
+    margin: 0;
+    opacity: 1;
+    padding: 0;
+    outline: none;
+    border-radius: 7px;
+    /*border: 1px solid #7AA7C6;*/
+    color: #042352;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-top-color: #7aa7c6;
+    border-bottom-color: #7aa7c6;
+    border-left-color: #7aa7c6;
+    border-right-color: #7aa7c6;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+/*.custom-dropdown {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    outline: none;
+}
+
+    .custom-dropdown:before, .custom-dropdown:after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        outline: none;
+    }
+
+    .custom-dropdown:after {
+        color: #0062a6;
+        content: "▼";
+        font-size: 13px;
+        height: 2em;
+        line-height: 1;
+        margin-top: -0.5em;
+        right: 0.2em;
+        top: 50%;
+        outline: none;
+        padding-right: 2px;
+    }
+
+    .custom-dropdown:before {
+        background-color: white;
+        border-color: #7AA7C6 #7AA7C6 #7AA7C6;
+        border-image: none;
+        border-style: solid solid solid none;
+        border-width: 1px 1px 1px 0;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        width: 22px;
+        outline: none;
+    }*/
+
+select::-ms-expand {
+    display: none;
+}
+
+.acciones_combo {
+    border: 1px solid #7AA7C6;
+    border-radius: 5px;
+    /*width:120px;*/
+    width: auto;
+    /*background-image:url('../Imagenes/icon_lista.png');*/
+    background-repeat: no-repeat;
+    background-position: right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #042352;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    appearance: none;
+}
+
+.combo_max {
+    border: 1px solid #7AA7C6;
+    width: 96%;
+    /*background-image: url('../Imagenes/icon_lista.png');*/
+    background-repeat: no-repeat;
+    background-position: right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #042352;
+    margin-bottom: 1%;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    appearance: none;
+    margin-top: 1%;
+    border-radius: 7px;
+    font-size: 15px;
+    padding-top: 0%;
+    height: 25px;
+}
+
+/*#ContentPlaceHolder_cmbOperaciones {
+    margin-top: 10px;
+    width: 170px;
+}*/
+
+/*-----------------------------------*/
+
+
+
+/*-------Grilla Detalle---------------------*/
+.t_item_detalle {
+    background-color: #D9D9DB;
+}
+
+    .t_item_detalle td {
+        color: #666666;
+        /*font-family: 'segoeregular';*/
+        font-family: "Lucida Grande", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: normal;
+        padding-bottom: 3px;
+        padding-top: 3px;
+        text-align: center;
+        border-right: 0;
+    }
+
+.c_item_detalle td {
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 12px;
+    color: #042352;
+    font-weight: normal;
+    text-align: right;
+    border-right: 0;
+}
+
+.titulo_item_pago {
+    background-color: #D9D9DB;
+    border-right: 0 none;
+    color: #666666;
+    float: left;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    padding-left: 2%;
+    text-align: left;
+    width: 98%;
+}
+
+/*-----------------------------------*/
+
+/*---------Posicion Consolidada------*/
+#ContentPlaceHolder_PosicionConsolidadaSmartphone {
+    display: none;
+}
+
+#ContentPlaceHolder_PosicionConsolidada {
+    display: block;
+}
+/*-----------------------------------*/
+
+/*----------Fechas------------------*/
+.seleccion_fechas {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+#ContentPlaceHolder_txtFechaInicio {
+    float: left;
+    width: 260px;
+}
+
+#ContentPlaceHolder_txtFechaFin {
+    float: left;
+    width: 260px;
+}
+
+.icono_fechas {
+    float: left;
+    margin-left: 1%;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+
+
+.txtCampos {
+    width: 135px;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #7A8EA6;
+    margin-right: 3px;
+    font-weight: normal;
+}
+
+/*-----------------------------------*/
+
+
+/*----Estado Cuenta------------------*/
+#ContentPlaceHolder_btnBuscarSmartP {
+    display: none;
+}
+
+#ContentPlaceHolder_txtFecha {
+    margin-bottom: 1%;
+    text-align: center;
+    width: 135px;
+}
+
+
+#estado_cuenta_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_id_estado_cuenta {
+    display: none;
+}
+/*-----------------------------------*/
+
+/*----Extracto Cuenta------------------*/
+#extractos_fechas {
+    margin-left: 10px;
+}
+
+#extractos_datos {
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#extracto_cuenta_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_id_extracto_cuenta {
+    display: none;
+}
+
+#ContentPlaceHolder_idExtractosDatosSmart {
+    display: none;
+}
+
+/*-----------------------------------*/
+
+/*-------Saldo Promedio--------------*/
+#saldopromedio_cuenta_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_id_saldopromedio_cuenta {
+    display: none;
+}
+
+/*-----------------------------------*/
+
+/*------Saldo por Confirmar-----------*/
+#saldoconfirmar_cuenta_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_id_saldoconfirmar_cuenta {
+    display: none;
+}
+
+#ContentPlaceHolder_idSaldosConfirmarDatosSmart {
+    display: none;
+}
+/*-----------------------------------*/
+
+
+
+/*--------Sobregiros---------------------*/
+#SobregiroSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_DetalleSobregirosSmart {
+    display: none;
+}
+/*---------Traspasos--------------------*/
+#cuentas_origen_destino_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_btnTraspasarSmart {
+    display: none;
+}
+
+#ConfirmacionSmart {
+    display: none;
+}
+
+#traspasos_pendientes_smart {
+    display: none;
+}
+
+/*---------Transferencias--------------------*/
+#ContentPlaceHolder_cmdTransferirSmart {
+    display: none;
+}
+
+/*-------------Transferencias ACH-----------------*/
+#agregar_cta_terceros1 {
+    float: left;
+    height: 190px;
+    width: 45%;
+}
+
+#agregar_cta_terceros2 {
+    float: right;
+    height: 190px;
+    margin-left: 10%;
+    width: 45%;
+}
+
+#ContentPlaceHolder_panelNuevaCuentaACH {
+    margin-left: 10px;
+}
+
+#ContentPlaceHolder_btnTransferirSmart {
+    display: none;
+}
+
+/*-------Solicitud Chequera---------------*/
+#cuentas_solicitud_chequeras_smart {
+    display: none;
+}
+
+#datoDetalle_solcheq {
+    height: 320px;
+}
+
+#solcheq_left {
+    float: left;
+    padding-top: 25px;
+    padding-left: 10px;
+    width: 45%;
+}
+
+#solcheq_right {
+    float: right;
+    padding-top: 25px;
+    padding-right: 10px;
+    width: 45%;
+}
+
+#agenciaChequera_left {
+    float: left;
+    padding-top: 25px;
+    padding-left: 10px;
+    width: 45%;
+}
+
+#agenciaChequera_right {
+    float: right;
+    padding-top: 25px;
+    padding-right: 10px;
+    width: 45%;
+}
+
+#sol_cheq_mensaje {
+    border: 1px solid #5094C3;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    text-align: center;
+    width: 75%;
+}
+
+#ContentPlaceHolder_btnEnviarSolicitudSmart {
+    display: none;
+}
+/*----------Consulta Transf ACH---------------*/
+
+/*#ContentPlaceHolder_cmbOperacionesSmart {
+    display:none;
+}*/
+
+#divcmbOperacionesSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_btnBuscarTransACHSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_SmartTablaTransfACH {
+    display: none;
+}
+
+/*---------Habilitacion de chequera----------*/
+#cuentas_hab_chequeras_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_btnEnviarHabilitacionSmart {
+    display: none;
+}
+/*-------------Pago de prestamo----------------*/
+#cuentas_prestamos_origen_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_cmdPrestamoSmart {
+    display: none;
+}
+/*---------Plan de pagos--------------------*/
+#prestamos_plan_pagos_smart {
+    display: none;
+}
+
+#ContentPlaceHolder_idPagoDatosSmart {
+    display: none;
+}
+
+#extractos_datos_pp {
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*--------Preliquidacion---------------------*/
+#prestamos_preliquidacion_smart {
+    display: none;
+}
+
+#extractos_datos_smartphone {
+    display: none;
+}
+
+/*-----Estado DPF----------------------------*/
+#EstadoDPFSmart {
+    display: none;
+}
+
+/*-----Historial DPF----------------------------*/
+#HistorialDPFSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_DatosHistorialDPFSmart {
+    display: none;
+}
+
+.historial_datos {
+    border: 1px solid #5094C3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #F7F6F2;
+    width: 80%;
+}
+
+.historial_datoDetalle {
+    height: 180px;
+    width: 80%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: 1px solid #5094C3;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    border-top: 0;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.h_datoDetalle_izq {
+    float: left;
+    padding-left: 25px;
+}
+
+.h_datoDetalle_izq_izq {
+    float: left;
+}
+
+.h_datoDetalle_izq_der {
+    float: right;
+    padding-left: 5px;
+}
+
+.h_datoDetalle_der {
+    float: right;
+    padding-right: 25px;
+}
+
+.h_datoDetalle_der_izq {
+    float: left;
+}
+
+.h_datoDetalle_der_der {
+    float: right;
+    padding-left: 5px;
+}
+
+/*#ContentPlaceHolder_gridHistorialSmart {
+  display:none;
+}*/
+
+/*----------Movimientos Tarjeta Debito--------*/
+#ContentPlaceHolder_btnBuscarMovTarjetaSmart {
+    display: none;
+}
+
+#TarjetaDebitoSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_gridDatosTarjetaDebitoSmart {
+    display: none;
+}
+
+/*---------Desactivar Tarjetas de Debito-------*/
+
+#ContentPlaceHolder_cmdDesactivarSmart {
+    display: none;
+}
+
+#DesactivarTarjetaSmart {
+    display: none;
+}
+
+/*---------Movimientos Web-------------------*/
+
+#ContentPlaceHolder_dgMovimientosWebSmart {
+    display: none;
+}
+
+/*------Alta de Pago de Servicios*/
+.combo_servicios {
+    width: 245px;
+    margin-bottom: 15px;
+}
+
+.cboDropServicios {
+    width: 240px;
+}
+
+.txt_servicios {
+    width: 60%;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+/*--------Planilla Pago-----------------------*/
+#PagoPlanillaSmart {
+    display: none;
+}
+
+/*----------Planilla Busqueda x fecha----------*/
+
+#ContentPlaceHolder_DatosPlanillaSmart {
+    display: none;
+}
+
+/*----------Pagos Especiales----------------*/
+#InstitucionSmart {
+    display: none;
+}
+
+/*----------Detalle Pago Especiales*/
+#CuentasInstitucionSmart {
+    display: none;
+}
+
+#CuotasPagarInstitucionSmart {
+    display: none;
+}
+
+#totalPagarSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_txtMontoS {
+    display: none;
+}
+
+#ContentPlaceHolder_btnPagarSmart {
+    display: none;
+}
+
+/*------------Movimiento Tarjeta Credito-----*/
+#MovTarjetasCreditoSmart {
+    display: none;
+}
+
+#ContentPlaceHolder_DatosMovTarjetaCreditoSmart {
+    display: none;
+}
+
+/*-----------Pago Tarjeta de Credito--------*/
+#PagoTarjetaCreditoSmart {
+    display: none;
+}
+
+/*----------Baja de Servicios---------------*/
+#ServiciosSmart {
+    display: none;
+}
+
+/*----------Pago de Servicios---------------*/
+#ServiciosActivosSmart {
+    display: none;
+}
+
+#CuentasOrigenPagoServicioSmart {
+    display: none;
+}
+
+#FacturasPagoServicioSmart {
+    display: none;
+}
+
+/*--------Pago Sintesis y  Prepago----------------------*/
+#CodigoPagoServicio {
+    float: left;
+    margin-left: 10px;
+}
+
+#EmpresaPagoServicio {
+    float: right;
+}
+
+#DatosPrepago {
+    margin-left: 10px;
+    margin-right: 290px;
+    text-align: right;
+}
+
+#ContentPlaceHolder_AgenciaFacturaSmart {
+    display: none;
+}
+
+/*----RUAT Vehiculos------------------------*/
+#ContentPlaceHolder_txtIdentificador {
+    text-transform: uppercase;
+    float: left;
+    width: 200px;
+    margin-bottom: 1%;
+}
+
+#ContentPlaceHolder_cbmTipoSeleccion {
+    float: left;
+    width: 200px;
+    margin-left: 25px;
+}
+
+#DatosVehiculoSeleccionado {
+    height: 200px;
+}
+
+#ladoIzquierdoVehiculo {
+    float: left;
+}
+
+#ladoDerechoVehiculo {
+    float: right;
+    margin-right: 160px;
+}
+
+#CuentasOrigenVehiculoSmart {
+    display: none;
+}
+
+#DeudasVehiculoSmart {
+    display: none;
+}
+
+#AgenciaVehiculoSmart {
+    display: none;
+}
+
+#divcbmTipoSeleccionVehiculo {
+    margin-top: 0.8%;
+}
+
+.cboDrpRuatVehiculo {
+    width: 215px;
+}
+
+/*-----RUAT Inmuebles-----------------------*/
+#ContentPlaceHolder_txtIdentificador {
+    width: 250px;
+    margin-right: 25px;
+}
+
+#divcbmTipoInmueble {
+    margin-bottom: 1%;
+    margin-top: 0.8%;
+}
+
+.cmbDrpRuat {
+    width: 260px;
+}
+
+#divcbmCodAlcaldia {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width: 262px;
+}
+
+#ContentPlaceHolder_txtIdentidad {
+    width: 250px;
+    margin-bottom: 1%;
+    margin-right: 25px;
+    float: left;
+}
+
+#divcbmIdentidad {
+    float: left;
+    margin-bottom: 1%;
+    margin-right: 25px;
+    margin-top: 0.8%;
+    width: 262px;
+}
+
+#divcbmExpedido {
+    margin-bottom: 1%;
+    margin-top: 0.8%;
+}
+
+.cmbDrpExpedido {
+    width: 120px;
+}
+
+#ContentPlaceHolder_lblExpedido {
+    float: right;
+    margin-right: 95px;
+}
+
+#ContentPlaceHolder_lblExpedidoSmart {
+    display: none;
+}
+
+#DatosInmuebleSeleccionado {
+    height: 225px;
+}
+
+#datosInmuebleIzq {
+    float: left;
+    width: 330px;
+}
+
+#datosInmuebleDer {
+    float: right;
+}
+
+#CuentasOrigenInmuebleSmart {
+    display: none;
+}
+
+#DeudasInmuebleSmart {
+    display: none;
+}
+
+#AgenciaInmuebleSmart {
+    display: none;
+}
+/*-----------Datos de Cuentas---------------*/
+#datos {
+    border: 1px solid #5094C3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 50%;
+    background-color: #F7F6F2;
+}
+
+#datoDetalle {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: 1px solid #5094C3;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    width: 50%;
+    border-top: 0;
+    text-align: right;
+    height: 130px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.datos_labels {
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+    color: #042352;
+    font-weight: normal;
+}
+
+.text_align_left {
+    text-align: left;
+}
+
+.text_align_right {
+    text-align: right;
+}
+/*-----------------------------------*/
+
+
+/*-------Agregar Nueva Cuenta----------*/
+.agregar_cuenta {
+    width: 98.6%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: #D9D9DB;
+    margin-left: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #8F9094;
+    border-top: 0;
+}
+
+.agregar_cuenta_smart {
+    width: 298px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: #36B7C1;
+    margin-left: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #8F9094;
+    border-top: 0;
+}
+
+#ContentPlaceHolder_lnkAgregarTercero {
+    background-image: url('../Slices/icon_expandir.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+
+#ContentPlaceHolder_lnkAgregarTerceroSmart {
+    background-image: url('../Slices/mas_bco.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+
+#trans_agregar_cta_terceros {
+    float: left;
+    height: 190px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.link_agregar {
+    color: #656565;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#ContentPlaceHolder_panelNuevaCuenta {
+    margin-left: 10px;
+    height: 300px;
+}
+
+.lb_alienados {
+    float: left;
+    width: 75px;
+}
+
+.txt_alineados {
+    float: left;
+    width: 200px;
+}
+/*-----------------------------------*/
+
+
+/*----------Mensajes--------------*/
+.lbl_mensaje_cta {
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #848484;
+    font-weight: normal;
+}
+
+.lbl_mensajes {
+    color: #848484;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+}
+/*-----------------------------------*/
+
+
+/*--------Datos de Transaferencias----------*/
+#panelDatosTransferencia {
+    margin-left: 10px;
+}
+
+#ContentPlaceHolder_txtMonto {
+    width: 150px;
+    margin-bottom: 0;
+}
+
+#ContentPlaceHolder_txtMontoP {
+    width: 150px;
+    margin-bottom: 0;
+}
+
+#ContentPlaceHolder_txtClaveTran1 {
+    width: 150px;
+}
+
+#clave_ctas_terceros {
+    margin-left: 10px;
+    margin-top: 1%;
+}
+
+#clave_sol_chequera {
+    margin-left: 10px;
+}
+
+/*#ContentPlaceHolder_txtDesc {
+    margin-bottom:0;
+}*/
+/*-----------------------------------*/
+
+
+/*-----------Nueva Grilla--------------*/
+.dg_grilla {
+    border: 1px solid;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.CabezalGrilla {
+    text-align: center;
+}
+
+    .CabezalGrilla td {
+        background-color: #D9D9DB;
+        border-right: 1px solid #8F9094;
+        color: #747475;
+        /*font-family: 'segoeregular';*/
+        font-family: "Lucida Grande", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding-bottom: 3px;
+        padding-top: 2px;
+    }
+
+        .CabezalGrilla td:last-child {
+            border-right: medium none;
+            border-top-right-radius: 5px;
+        }
+
+        .CabezalGrilla td:first-child {
+            border-top-left-radius: 5px;
+        }
+
+.items_Grilla {
+    border-right: 1px solid #8F9094;
+    color: #042352;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 14px;
+    padding: 2px;
+    font-weight: normal;
+}
+
+    .items_Grilla td {
+        border-right: 1px solid #8F9094;
+    }
+
+        .items_Grilla td:last-child {
+            border-right: medium none;
+        }
+
+.paginacion_grilla {
+    background-color: #D9D9DB;
+    color: #8F9094;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: normal;
+}
+/*-----------------------------------*/
+
+/*------Botones----------------------*/
+
+.il_botones {
+    /*background-color: #36B7C1;
+    border: 1px solid #36B7C1;*/
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 7px;
+    color: #FFFFFF;
+    cursor: pointer;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 3px;
+    width: 70px;
+}
+
+.il_botones2 {
+    /*background-color: #36B7C1;
+    border: 1px solid #36B7C1;*/
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 7px;
+    color: #FFFFFF;
+    cursor: pointer;
+    /*font-family: 'segoeregular';*/
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 3px;
+    width: 170px;
+}
+
+#ContentPlaceHolder_btnExportarExtracto {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/*-----------------------------------*/
+
+
+/*---------------Otros---------------*/
+.margin10 {
+    margin-left: 10px;
+}
+/*-----------------------------------*/
+
+
+/*-------------Input---------------*/
+input[type="radio"]:checked {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+/*-----------------------------------*/
